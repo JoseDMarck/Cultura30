@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head >
+
+ <meta *ngIf="post" property="og:url" content="http://michoacantrespuntocero.com/cultura30/publicaciones/{{post.slug}}" />
+ <meta *ngIf="post" property="og:title" content="{{post.title.rendered}}" />
+ <meta *ngIf="post" property="og:description" content="{{post.excerpt.rendered}}" />
+ <meta *ngIf="post" property="og:image" content="{{ post.imagen_minsize }}" />
+
+
+	<title></title>
+
+  <link rel="stylesheet" href="assets/bootstrap-4.0.0-beta-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+
+	 
+</head>
+<body>
+
+<div class="contenidoPost" *ngIf="post">
+  
+<!-- Imagen del post -->
+ 
+	<div class="Seccion-titulo">
+        <div class="boderAmarillo" *ngIf="post.Mes !== ''"></div>
+ 
+		<div class="BloqueFecha" *ngIf="post.Mes !== ''">
+			<div class="dia">{{ post.Dia }}</div>
+            <div class="mes">{{ post.Mes }}</div>
+		</div><!-- BloqueFecha -->
+
+		<div class="BloqueDatos">
+			    <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                <div class="fecha" *ngIf="post.Mes === ''">{{ post.post_fecha}}</div>
+                <div class="autor">{{post.post_author}}</div>
+                <div class="lugar" *ngIf="post.Mes !== ''">{{ post.Lugar }}</div>
+                <div class="hora" *ngIf="post.Mes !== ''">{{ post.Hora }}</div>
+		</div><!-- BloqueDatos -->
+
+	<div style="clear: both;"></div>
+	</div><!-- Seccion-titulo -->
+
+
+	<div class="imagenPost">
+		<img src="{{ post.imagen_minsize }}" class="img-fluid">
+	</div>
+ 
+	
+	<div [innerHTML]="sanitizer.bypassSecurityTrustHtml(post.content.rendered)"></div>
+	 
+	<!--<iframe width="560" height="315" [src]="url" frameborder="0" allowfullscreen></iframe>-->
+ 
+ 
+
+ <div class="CompartirTexto">
+ 	Compartir:
+ </div>
+
+
+
+
+<button class="facebook" ceiboShare  [facebook]="{u: repoUrl}">Facebook</button>
+<button class="twitter" ceiboShare  [twitter]="{url:repoUrl, text:TweetTitulo+', más información en el siguiente enlace: '}">Twitter</button>
+<button class="google" ceiboShare  [googlePlus]="{url:repoUrl}">Google Plus</button>
+
+
+ 
+
+<div style="clear: both; width: 100%; height:200px;"></div>
+
+
+<div *ngIf="!post">
+	<img class="img-fluid" src="assets/images/home/loading2.gif">	
+</div>
+
+
+</div>
+
+
+
+
+
+
+</body>
+  <link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/font-awesome-4.7.0/css/font-awesome.css">
+</html>
+
+
+

@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="assets/bootstrap-4.0.0-beta-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body  [@fadeInAnimation]="stateName">
+
+<div class="ScrollPost ">
+  
+  <div class="BlurTop">
+       <img src="assets/images/home/blur.png" class="imagen_min_posts">
+  </div>
+
+ 
+
+  
+  <!-- MUSICA  ============================ -->
+  <div class="" *ngIf="exist_posts_musica">
+
+     <div class="nombreSeccion" style="display: block !important; cursor: pointer;" (click)="SelecccionMenu('musica');">
+       Música 
+      <div class="colorSeccion color-azul" style="width: 120px;"></div>
+    </div> 
+    
+    <!-- Seccion para el menu -->
+    <div *ngFor="let post of posts_musica; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+
+      <div class="Mestitulo" style="display: none;">
+             {{ post.mensualidad }}
+      </div>
+      
+      <div class="bloqueX color-azul {{post.imagen_sin_post}}">
+     
+
+         <div class="cuadrito color-azul"></div>
+
+         <div class="CuadroInformacion">
+             
+
+            <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
+            <div class="mes">{{ post.Mes }}</div>
+
+            <div class="CuadroEventos">
+                <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{ post.post_fecha}}</div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{post.post_author}}</div>
+                <div class="lugar" *ngIf="post.Mes !== ''">{{ post.Lugar }}</div>
+                <div class="hora"  *ngIf="post.Mes !== ''">{{ post.Hora }}</div>
+
+                <div [innerHTML]="post.excerpt.rendered" class="extracto"></div>
+
+            </div><!-- CuadroEventos -->
+
+         </div><!-- Cuadro informacion -->
+
+      
+         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+         <img src="{{ post.imagen_minsize }}" class="imagen_full">
+      </div>
+
+    </div><!-- col -->
+
+        <div style="clear: both; width: 100%; height:10px;"></div>
+  
+
+
+  </div>
+
+
+  <!-- CINE ============================ -->
+    <div class="" *ngIf="exist_posts_cine">
+
+
+    <div class="nombreSeccion" style="display: block !important; cursor: pointer;" (click)="SelecccionMenu('cine');">
+       Cine
+      <div class="colorSeccion color-verde" style="width: 80px;"></div>
+    </div> 
+
+
+    <!-- Seccion para el menu -->
+    <div *ngFor="let post of posts_cine; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+
+      <div class="Mestitulo" style="display: none;">
+             {{ post.mensualidad }}
+      </div>
+      
+      <div class="bloqueX color-verde {{post.imagen_sin_post}}">
+     
+
+         <div class="cuadrito color-verde"></div>
+
+         <div class="CuadroInformacion">
+             
+
+            <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
+            <div class="mes">{{ post.Mes }}</div>
+
+            <div class="CuadroEventos">
+                <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{ post.post_fecha}}</div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{post.post_author}}</div>
+                <div class="lugar" *ngIf="post.Mes !== ''">{{ post.Lugar }}</div>
+                <div class="hora"  *ngIf="post.Mes !== ''">{{ post.Hora }}</div>
+
+                <div [innerHTML]="post.excerpt.rendered" class="extracto"></div>
+
+            </div><!-- CuadroEventos -->
+
+         </div><!-- Cuadro informacion -->
+
+      
+         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+         <img src="{{ post.imagen_minsize }}" class="imagen_full">
+         
+      </div>
+
+    </div><!-- col -->
+
+        <div style="clear: both; width: 100%; height:10px;"></div>
+   
+ 
+
+
+
+  </div>
+
+
+
+  <!-- LIBROS / REVISTAS ============================ -->
+<div class="" *ngIf="exist_posts_librosRevistas">
+
+     <div class="nombreSeccion" style="display: block !important; cursor: pointer;" (click)="SelecccionMenu('libros-revistas');"  >
+       Libros / Revistas
+      <div class="colorSeccion color-rosa" style="width: 280px;"></div>
+    </div>
+
+    
+    <!-- Seccion para el menu -->
+    <div  *ngFor="let post of posts_librosRevistas; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}">
+        
+
+
+      <div class="Mestitulo" style="display: none;">
+             {{ post.mensualidad }}
+      </div>
+      
+      <div class="bloqueX color-rosa {{post.imagen_sin_post}}">
+     
+
+         <div class="cuadrito color-rosa"></div>
+
+         <div class="CuadroInformacion">
+             
+
+            <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
+            <div class="mes">{{ post.Mes }}</div>
+
+            <div class="CuadroEventos">
+                <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{ post.post_fecha}}</div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{post.post_author}}</div>
+                <div class="lugar" *ngIf="post.Mes !== ''">{{ post.Lugar }}</div>
+                <div class="hora"  *ngIf="post.Mes !== ''">{{ post.Hora }}</div>
+
+                <div [innerHTML]="post.excerpt.rendered" class="extracto"></div>
+
+            </div><!-- CuadroEventos -->
+
+         </div><!-- Cuadro informacion -->
+
+      
+        <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+        <img src="{{ post.imagen_minsize }}" class="imagen_full">
+      </div>
+
+    </div><!-- col -->
+
+        <div style="clear: both; width: 100%; height:10px;"></div>
+ 
+ 
+
+ 
+  </div>
+
+
+
+  <!-- RADIO / PODCAST ============================ -->
+
+  <div class="" *ngIf="exist_posts_radioPodcast">
+
+
+
+    <div  class="nombreSeccion"  style="display: block !important; cursor: pointer;"  (click)="SelecccionMenu('radio-potcast');" >
+       Radio / Podcast
+      <div class="colorSeccion color-amarillo" style="width: 270px;"></div>
+    </div>
+
+    
+    <!-- Seccion para el menu -->
+    <div  *ngFor="let post of posts_radioPodcast; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}">
+        
+
+
+      <div class="Mestitulo" style="display: none;">
+             {{ post.mensualidad }}
+      </div>
+      
+      <div class="bloqueX color-amarillo {{post.imagen_sin_post}}">
+     
+
+         <div class="cuadrito color-amarillo"></div>
+
+         <div class="CuadroInformacion">
+             
+
+            <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
+            <div class="mes">{{ post.Mes }}</div>
+
+            <div class="CuadroEventos">
+                <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{ post.post_fecha}}</div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{post.post_author}}</div>
+                <div class="lugar" *ngIf="post.Mes !== ''">{{ post.Lugar }}</div>
+                <div class="hora"  *ngIf="post.Mes !== ''">{{ post.Hora }}</div>
+
+                <div [innerHTML]="post.excerpt.rendered" class="extracto"></div>
+
+            </div><!-- CuadroEventos -->
+
+         </div><!-- Cuadro informacion -->
+
+      
+         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+         <img src="{{ post.imagen_minsize }}" class="imagen_full">
+      </div>
+
+    </div><!-- col -->
+
+        <div style="clear: both; width: 100%; height:10px;"></div>
+   
+  </div>
+
+
+
+  <!-- GASTRONOMIA ============================ -->
+
+  <div class="" *ngIf="exist_posts_gastronomia">
+
+    <div class="nombreSeccion"  style="display: block !important; cursor: pointer;" (click)="SelecccionMenu('gastronomia');">
+       Gastronomía
+      <div class="colorSeccion color-azul" style="width: 220px;"></div>
+    </div>
+    
+    <!-- Seccion para el menu -->
+    <div  *ngFor="let post of posts_gastronomia; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}">
+        
+
+
+      <div class="Mestitulo" style="display: none;">
+             {{ post.mensualidad }}
+      </div>
+      
+      <div class="bloqueX color-azul {{post.imagen_sin_post}}">
+     
+
+         <div class="cuadrito color-azul"></div>
+
+         <div class="CuadroInformacion">
+             
+
+            <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
+            <div class="mes">{{ post.Mes }}</div>
+
+            <div class="CuadroEventos">
+                <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{ post.post_fecha}}</div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{post.post_author}}</div>
+                <div class="lugar" *ngIf="post.Mes !== ''">{{ post.Lugar }}</div>
+                <div class="hora"  *ngIf="post.Mes !== ''">{{ post.Hora }}</div>
+
+                <div [innerHTML]="post.excerpt.rendered" class="extracto"></div>
+
+            </div><!-- CuadroEventos -->
+         </div><!-- Cuadro informacion -->
+
+      
+        <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+        <img src="{{ post.imagen_minsize }}" class="imagen_full">
+    
+
+      </div>
+
+    </div><!-- col -->
+
+        <div style="clear: both; width: 100%; height:10px;"></div>
+ 
+
+
+
+
+
+  </div>
+
+
+
+
+  <!-- ARTESANIAS ============================ -->
+
+<div class=""  *ngIf="exist_posts_artesania">
+
+     <div class="nombreSeccion" style="display: block !important; cursor: pointer;" (click)="SelecccionMenu('artesania');"> 
+       Artesanías
+      <div class="colorSeccion color-verde" style="width: 170px;"></div>
+    </div>
+    
+    <!-- Seccion para el menu -->
+    <div  *ngFor="let post of posts_artesania; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+
+      <div class="Mestitulo" style="display: none;">
+             {{ post.mensualidad }}
+      </div>
+      
+      <div class="bloqueX color-verde {{post.imagen_sin_post}}">
+     
+
+         <div class="cuadrito color-verde"></div>
+
+         <div class="CuadroInformacion">
+             
+
+            <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
+            <div class="mes">{{ post.Mes }}</div>
+
+            <div class="CuadroEventos">
+                <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{ post.post_fecha}}</div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{post.post_author}}</div>
+                <div class="lugar" *ngIf="post.Mes !== ''">{{ post.Lugar }}</div>
+                <div class="hora"  *ngIf="post.Mes !== ''">{{ post.Hora }}</div>
+
+                <div [innerHTML]="post.excerpt.rendered" class="extracto"></div>
+
+            </div><!-- CuadroEventos -->
+
+         </div><!-- Cuadro informacion -->
+
+      
+         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+         <img src="{{ post.imagen_minsize }}" class="imagen_full">
+      </div>
+
+    </div><!-- col -->
+ 
+     <div style="clear: both; width: 100%; height:10px;"></div>
+   
+
+  </div>
+
+
+  <!-- VIAJES ============================ -->
+  <div class="" *ngIf="exist_posts_viajes">
+
+     <div class="nombreSeccion" style="display: block !important; cursor: pointer;" (click)="SelecccionMenu('viajes');"> 
+       Viajes
+      <div class="colorSeccion color-rosa" style="width: 100px;"></div>
+    </div>
+    
+    <!-- Seccion para el menu -->
+    <div  *ngFor="let post of posts_viajes; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+        
+
+
+      <div class="Mestitulo" style="display: none;">
+             {{ post.mensualidad }}
+      </div>
+      
+      <div class="bloqueX color-rosa {{post.imagen_sin_post}}">
+     
+
+         <div class="cuadrito color-rosa"></div>
+
+         <div class="CuadroInformacion">
+             
+
+            <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
+            <div class="mes">{{ post.Mes }}</div>
+
+            <div class="CuadroEventos">
+                <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{ post.post_fecha}}</div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{post.post_author}}</div>
+                <div class="lugar" *ngIf="post.Mes !== ''">{{ post.Lugar }}</div>
+                <div class="hora"  *ngIf="post.Mes !== ''">{{ post.Hora }}</div>
+
+                <div [innerHTML]="post.excerpt.rendered" class="extracto"></div>
+
+            </div><!-- CuadroEventos -->
+
+         </div><!-- Cuadro informacion -->
+
+      
+         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+          <img src="{{ post.imagen_minsize }}" class="imagen_full">
+      </div>
+
+    </div><!-- col -->
+
+        <div style="clear: both; width: 100%; height:10px;"></div>
+ 
+ 
+  </div>
+
+
+
+
+  <!-- TRUEQUES ============================ -->
+
+<div class="" *ngIf="exist_posts_trueques">
+
+    <div class="nombreSeccion" style="display: block !important; cursor: pointer;" (click)="SelecccionMenu('trueques');"> 
+       Trueques
+      <div class="colorSeccion color-amarillo" style="width: 150px;"></div>
+    </div>
+   
+    <!-- Seccion para el menu -->
+    <div *ngFor="let post of posts_trueques; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+        
+
+
+
+      <div class="Mestitulo" style="display: none;">
+             {{ post.mensualidad }}
+      </div>
+      
+      <div class="bloqueX color-amarillo {{post.imagen_sin_post}}">
+     
+
+         <div class="cuadrito color-amarillo"></div>
+
+         <div class="CuadroInformacion">
+             
+
+            <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
+            <div class="mes">{{ post.Mes }}</div>
+
+            <div class="CuadroEventos">
+                <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{ post.post_fecha}}</div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{post.post_author}}</div>
+                <div class="lugar" *ngIf="post.Mes !== ''">{{ post.Lugar }}</div>
+                <div class="hora"  *ngIf="post.Mes !== ''">{{ post.Hora }}</div>
+
+                <div [innerHTML]="post.excerpt.rendered" class="extracto"></div>
+
+            </div><!-- CuadroEventos -->
+
+         </div><!-- Cuadro informacion -->
+
+      
+         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+         <img src="{{ post.imagen_minsize }}" class="imagen_full">
+      </div>
+
+    </div><!-- col -->
+
+        <div style="clear: both; width: 100%; height:10px;"></div>
+ 
+
+  </div>
+
+
+
+
+
+  <!-- ESPACIOS ============================ -->
+
+  <div class="" *ngIf="exist_posts_espacios">
+
+
+    <div class="nombreSeccion" style="display: block !important; cursor: pointer;" (click)="SelecccionMenu('espacios');"> 
+       Espacios
+      <div class="colorSeccion color-verde" style="width: 150px;"></div>
+    </div> 
+
+
+    <!-- Seccion para el menu -->
+    <div  *ngFor="let post of posts_espacios; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+        
+
+
+      <div class="Mestitulo" style="display: none;">
+             {{ post.mensualidad }}
+      </div>
+
+      
+      <div class="bloqueX color-verde {{post.imagen_sin_post}}">
+     
+
+         <div class="cuadrito color-verde"></div>
+
+         <div class="CuadroInformacion">
+             
+
+            <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
+            <div class="mes">{{ post.Mes }}</div>
+
+            <div class="CuadroEventos">
+                <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{ post.post_fecha}}</div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{post.post_author}}</div>
+                <div class="lugar" *ngIf="post.Mes !== ''">{{ post.Lugar }}</div>
+                <div class="hora"  *ngIf="post.Mes !== ''">{{ post.Hora }}</div>
+
+                <div [innerHTML]="post.excerpt.rendered" class="extracto"></div>
+
+            </div><!-- CuadroEventos -->
+         </div><!-- Cuadro informacion -->
+
+      
+         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+         <img src="{{ post.imagen_minsize }}" class="imagen_full">
+         
+      </div>
+
+    </div><!-- col -->
+
+    <div style="clear: both; width: 100%; height:10px;"></div>
+
+  </div>
+
+
+
+
+ <!-- EXPOSICIONES ============================ -->
+
+
+ <div class="" *ngIf="exist_posts_exposiciones">
+
+
+    <div class="nombreSeccion" style="display: block !important; cursor: pointer;" (click)="SelecccionMenu('exposiciones');"> 
+       Exposiciones
+      <div class="colorSeccion color-rosa" style="width: 224px;"></div>
+    </div> 
+
+
+    <!-- Seccion para el menu -->
+    <div  *ngFor="let post of posts_exposiciones; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+        
+
+
+      <div class="Mestitulo" style="display: none;">
+             {{ post.mensualidad }}
+      </div>
+      
+      <div class="bloqueX color-rosa {{post.imagen_sin_post}}">
+     
+
+         <div class="cuadrito color-rosa"></div>
+
+         <div class="CuadroInformacion">
+             
+
+           <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
+            <div class="mes">{{ post.Mes }}</div>
+
+            <div class="CuadroEventos">
+                <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{ post.post_fecha}}</div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{post.post_author}}</div>
+                <div class="lugar" *ngIf="post.Mes !== ''">{{ post.Lugar }}</div>
+                <div class="hora"  *ngIf="post.Mes !== ''">{{ post.Hora }}</div>
+
+                <div [innerHTML]="post.excerpt.rendered" class="extracto"></div>
+
+            </div><!-- CuadroEventos -->
+
+         </div><!-- Cuadro informacion -->
+
+      
+         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+         <img src="{{ post.imagen_minsize }}" class="imagen_full">
+         
+      </div>
+
+    </div><!-- col -->
+
+        <div style="clear: both; width: 100%; height:10px;"></div>
+  
+
+  </div>
+
+
+  <!-- CONFERENCIAS, CURSOS Y TALLERES ============================ -->
+  <div class="" *ngIf="exist_posts_conferencias">
+
+
+    <div class="nombreSeccion" style="display: block !important; cursor: pointer;" (click)="SelecccionMenu('conferencias-cursos-talleres');"> 
+        Otros eventos
+      <div class="colorSeccion color-amarillo" style="width: 236px;"></div>
+    </div> 
+
+
+    <!-- Seccion para el menu -->
+    <div *ngFor="let post of posts_conferencias; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+        
+
+
+      <div class="Mestitulo" style="display: none;">
+             {{ post.mensualidad }}
+      </div>
+      
+      <div class="bloqueX color-amarillo {{post.imagen_sin_post}}">
+     
+
+         <div class="cuadrito color-amarillo"></div>
+
+         <div class="CuadroInformacion">
+             
+
+            <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
+            <div class="mes">{{ post.Mes }}</div>
+
+            <div class="CuadroEventos">
+                <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{ post.post_fecha}}</div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{post.post_author}}</div>
+                <div class="lugar" *ngIf="post.Mes !== ''">{{ post.Lugar }}</div>
+                <div class="hora"  *ngIf="post.Mes !== ''">{{ post.Hora }}</div>
+
+                <div [innerHTML]="post.excerpt.rendered" class="extracto"></div>
+
+            </div><!-- CuadroEventos -->
+         </div><!-- Cuadro informacion -->
+
+      
+         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+         <img src="{{ post.imagen_minsize }}" class="imagen_full">
+         
+      </div>
+
+    </div><!-- col -->
+
+    <div style="clear: both; width: 100%; height:10px;"></div>
+
+
+  </div>
+
+  <!-- OPINIÓN  ============================ -->
+
+
+  <div class="" *ngIf="exist_posts_opinion">
+ 
+     <div class="nombreSeccion"  style="display: block !important; cursor: pointer;" (click)="SelecccionMenu('opinion');">
+       Opinión 
+      <div class="colorSeccion color-azul" style="width: 130px;"></div>
+    </div> 
+    
+    <!-- Seccion para el menu -->
+    <div *ngFor="let post of posts_opinion; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+
+    
+      
+      <div class="bloqueX color-azul {{post.imagen_sin_post}}">
+     
+
+         <div class="cuadrito color-azul"></div>
+
+         <div class="CuadroInformacion">
+          <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
+            <div class="mes">{{ post.Mes }}</div>
+
+            <div class="CuadroEventos">
+                <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{ post.post_fecha}}</div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{post.post_author}}</div>
+                <div class="lugar" *ngIf="post.Mes !== ''">{{ post.Lugar }}</div>
+                <div class="hora"  *ngIf="post.Mes !== ''">{{ post.Hora }}</div>
+
+                <div [innerHTML]="post.excerpt.rendered" class="extracto"></div>
+
+            </div><!-- CuadroEventos -->
+         </div><!-- Cuadro informacion -->
+
+      
+         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+         <img src="{{ post.imagen_minsize }}" class="imagen_full">
+      </div>
+
+    </div><!-- col -->
+
+  <div style="clear: both; width: 100%; height:10px;"></div>
+   
+   
+
+
+
+  </div>
+
+
+  <!-- OPINIÓN  ============================ -->
+
+
+  <div class="" *ngIf="exist_posts_teatro">
+ 
+     <div class="nombreSeccion"  style="display: block !important; cursor: pointer;" (click)="SelecccionMenu('teatro');">
+       Teatro
+      <div class="colorSeccion color-verde" style="width: 108px;"></div>
+    </div> 
+    
+    <!-- Seccion para el menu -->
+    <div *ngFor="let post of posts_teatro; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+
+    
+      
+      <div class="bloqueX color-teatro {{post.imagen_sin_post}}">
+     
+
+         <div class="cuadrito color-teatro"></div>
+
+         <div class="CuadroInformacion">
+          <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
+            <div class="mes">{{ post.Mes }}</div>
+
+            <div class="CuadroEventos">
+                <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{ post.post_fecha}}</div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{post.post_author}}</div>
+                <div class="lugar" *ngIf="post.Mes !== ''">{{ post.Lugar }}</div>
+                <div class="hora"  *ngIf="post.Mes !== ''">{{ post.Hora }}</div>
+
+                <div [innerHTML]="post.excerpt.rendered" class="extracto"></div>
+
+            </div><!-- CuadroEventos -->
+         </div><!-- Cuadro informacion -->
+
+      
+         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+         <img src="{{ post.imagen_minsize }}" class="imagen_full">
+      </div>
+
+    </div><!-- col -->
+
+  <div style="clear: both; width: 100%; height:10px;"></div>
+  
+
+   
+
+
+
+  </div>
+
+
+   <!-- FOTOGRAFÍA ============================ -->
+  <div class="" *ngIf="exist_posts_fotografia">
+
+     <div class="nombreSeccion" style="display: block !important; cursor: pointer;" (click)="SelecccionMenu('fotografia');"> 
+       Fotografía
+      <div class="colorSeccion color-rosa" style="width: 174px;"></div>
+    </div>
+    
+    <!-- Seccion para el menu -->
+    <div  *ngFor="let post of posts_fotografia; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+        
+
+
+      <div class="Mestitulo" style="display: none;">
+             {{ post.mensualidad }}
+      </div>
+      
+      <div class="bloqueX color-rosa {{post.imagen_sin_post}}">
+     
+
+         <div class="cuadrito color-rosa"></div>
+
+         <div class="CuadroInformacion">
+             
+
+            <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
+            <div class="mes">{{ post.Mes }}</div>
+
+            <div class="CuadroEventos">
+                <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{ post.post_fecha}}</div>
+                <div class="lugar" *ngIf="post.Mes === ''">{{post.post_author}}</div>
+                <div class="lugar" *ngIf="post.Mes !== ''">{{ post.Lugar }}</div>
+                <div class="hora"  *ngIf="post.Mes !== ''">{{ post.Hora }}</div>
+
+                <div [innerHTML]="post.excerpt.rendered" class="extracto"></div>
+
+            </div><!-- CuadroEventos -->
+
+         </div><!-- Cuadro informacion -->
+
+      
+         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+          <img src="{{ post.imagen_minsize }}" class="imagen_full">
+      </div>
+
+    </div><!-- col -->
+
+        <div style="clear: both; width: 100%; height:10px;"></div>
+        <div style="clear: both; width: 100%; height:200px;"></div>
+ 
+ 
+  </div>
+
+
+
+ 
+
+
+
+</div><!--scrollPost END -->
+
+
+
+ 
+</body>
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+</html>
+
+
+
+
+
+ 
