@@ -16,13 +16,17 @@
 
   <div class="menu-web text-gray-dar">
       
+      
       <div class="menu-logo" (click)="GotoInicio(0)"  [ngClass]="{'menu-current': selectedClass === 0}" style="cursor: pointer;">
         <img class="img-fluid"  src="assets/images/home/Cultura-3.0-Logo.png"> 
       </div><!-- menu-logo -->
 
-      <div class="sombra-menu">
+
+      <div class="sombra-menu" (click)="GotoInicio(0)" >
         <img class="img-fluid"  src="assets/images/home/Sombra-bloque-secciones.png"> 
       </div>
+
+     
 
       
 
@@ -43,7 +47,7 @@
         </div>
 
         <div class="Bloques"  (click)="SeleccionMenu(3, 'cine');" [ngClass]="{'menu-current': selectedClass === 3}">
-          <span class="color-txt-verde">*</span> Cine
+          <span class="color-txt-verde">*</span> Cine y TV
         </div>
 
         <div class="Bloques"  (click)="SeleccionMenu(4, 'libros-revistas');" [ngClass]="{'menu-current': selectedClass === 4}">

@@ -262,6 +262,7 @@ body{
     left: 10%;
     top: -20%;
     opacity: 0.5;
+    pointer-events: none;
     filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
