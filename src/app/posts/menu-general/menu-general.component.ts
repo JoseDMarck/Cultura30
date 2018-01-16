@@ -53,14 +53,14 @@ SeleccionMenu(ValorNuevo: number, slug:string ) {
 
 
 GotoInicio(ValorNuevo: number ) {
-	
+	this.router.navigate([""]);
   if (this.selectedClass === ValorNuevo) {
-      this.selectedClass = 0;
+       
   }
 
   else {
         this.selectedClass = ValorNuevo;
-        this.router.navigate([""]);
+        
     }
 
 
