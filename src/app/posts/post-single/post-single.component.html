@@ -18,20 +18,19 @@
 <!-- Imagen del post -->
  
 	<div class="Seccion-titulo">
-        <div class="boderAmarillo"></div>
-
-		<div class="BloqueFecha">
+        <div class="boderAmarillo" *ngIf="post.Mes !== ''"></div>
+ 
+		<div class="BloqueFecha" *ngIf="post.Mes !== ''">
 			<div class="dia">{{ post.Dia }}</div>
             <div class="mes">{{ post.Mes }}</div>
 		</div><!-- BloqueFecha -->
 
-
-
 		<div class="BloqueDatos">
 			    <div class="titulo" [innerHTML]="post.title.rendered"></div>
-                <div class="lugar">{{ post.Lugar }}</div>
-                <div class="hora">{{ post.Hora }}</div>		
-                <div class="lugar">Por: {{post.post_author}}</div>		
+                <div class="fecha" *ngIf="post.Mes === ''">{{ post.post_fecha}}</div>
+                <div class="autor">{{post.post_author}}</div>
+                <div class="lugar" *ngIf="post.Mes !== ''">{{ post.Lugar }}</div>
+                <div class="hora" *ngIf="post.Mes !== ''">{{ post.Hora }}</div>
 		</div><!-- BloqueDatos -->
 
 	<div style="clear: both;"></div>
