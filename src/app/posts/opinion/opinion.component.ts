@@ -153,7 +153,7 @@ export class OpinionComponent implements OnInit {
 
 
  selectPost(slug) {
-    this.router.navigate(["publicaciones/"+slug]);
+    this.router.navigate([slug]);
     //this.router.navigate([slug]);
     console.log("Slug normal", slug)
 }
