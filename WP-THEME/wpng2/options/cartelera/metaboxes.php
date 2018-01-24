@@ -1,5 +1,4 @@
 <?php ob_start(); ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <?php
 //add the button to lanch the thickbox
@@ -258,9 +257,12 @@ $url_final = str_replace($quitar, "cultura30/posts-redes/", $valor_url_post);
 ?>
 
 
+
 <script type="text/javascript">
  
-  
+
+jQuery(document).ready(function( $ ) {
+
   function copyToClipboard(element) {
   var $temp = $("<input>");
   $("body").append($temp);
@@ -269,14 +271,13 @@ $url_final = str_replace($quitar, "cultura30/posts-redes/", $valor_url_post);
   $temp.remove();
 }
 
- 
+});
+
 
 </script>
 
-<p style="display:none" id="p1"><?php echo $url_final ?></p>
-<h1 style="cursor: pointer;" onclick="copyToClipboard('#p1')">Click aquí para copiar URL para Redes</h1>
-
-
+<h4 style="" onclick="copyToClipboard('#p1')">Copía la URL para Redes:</h4>
+<p  style="display:block; color: #f04438; font-weight: 600" id="p1"><?php echo $url_final ?></p>
  
   
 
