@@ -19,7 +19,7 @@
  //http://michoacantrespuntocero.com/cultura30/posts-redes/2a-exposicion-de-altares-de-michoacanos-ilustres/ 
 $valor_url_post = get_permalink();
 $quitar = array("posts-redes/");
-$url_final = str_replace($quitar, "publicaciones/", $valor_url_post);
+$url_final = str_replace($quitar, "", $valor_url_post);
 //echo $url_final
 ?>
 	
