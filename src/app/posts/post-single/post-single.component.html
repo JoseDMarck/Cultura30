@@ -29,8 +29,8 @@
 			    <div class="titulo" [innerHTML]="post.title.rendered"></div>
                 <div class="fecha" *ngIf="post.Mes === ''">{{ post.post_fecha}}</div>
                 <div class="autor">{{post.post_author}}</div>
-                <div class="lugar" *ngIf="post.Mes !== ''">{{ post.Lugar }}</div>
-                <div class="hora" *ngIf="post.Mes !== ''">{{ post.Hora }}</div>
+                <div class="lugar" *ngIf="post.Mes !== ''"> Lugar: {{ post.Lugar }}, <span class="fechaM">{{ post.Dia }} {{ post.Mes }}, </span>  {{ post.Hora }} hrs.</div>
+
 		</div><!-- BloqueDatos -->
 
 	<div style="clear: both;"></div>

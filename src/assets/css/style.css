@@ -12,9 +12,9 @@ body{
 
 .mainCultura{
   width: 100%;
-  height: 100%;
+  height: auto;
   position: absolute;
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
   overflow-x: none;
 
 
@@ -528,7 +528,7 @@ body{
   width: 80%;
   height: auto;
   position: relative;
-  overflow-y:  scroll;
+  /*overflow-y:  scroll;*/
   overflow-x: hidden;
   padding-top: 40px;
   float: right;
@@ -776,6 +776,33 @@ transform: scale(1.1,1.1); /* Standard syntax */
 
 
 
+/* --------------------------------------------------------
+/* ---- INSIDE POSTS
+-------------------------------------------------------- */
+
+
+.imagen-BG{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+    background-position: center center!important;
+    background-size: cover!important;
+    display: block!important;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    -o-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+    -webkit-filter: brightness(70%);  
+}
+
+
 
 
 
@@ -789,13 +816,15 @@ transform: scale(1.1,1.1); /* Standard syntax */
   width: 100%;
   height: auto;
   position: relative;
+  margin-bottom: 20px;
+
 }
 
 .Seccion-titulo > .BloqueFecha{
   width: 7%;
   height: auto;
   float: left;
-  padding-left:  0px;
+  padding-left: 0px;
   position: relative;
 }
 
@@ -835,7 +864,7 @@ transform: scale(1.1,1.1); /* Standard syntax */
   font-family: "Roboto-Light";
   font-size: 21px;
   line-height: 21px; 
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #000;
 } 
 
@@ -845,11 +874,6 @@ transform: scale(1.1,1.1); /* Standard syntax */
   font-family: "Roboto-Light";
   font-size: 21px;
   line-height: 21px; 
-
-  
-
-
-
   margin-bottom: 5px;
   color: #000;
   text-transform: lowercase;
@@ -865,9 +889,8 @@ transform: scale(1.1,1.1); /* Standard syntax */
 
 .Seccion-titulo > .BloqueDatos > .lugar{
    font-family: "Roboto-Light";
-  font-size: 24px;
-  line-height: 26px;
-  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 20px;
 } 
 
 .Seccion-titulo > .BloqueDatos > .hora{
@@ -879,7 +902,7 @@ transform: scale(1.1,1.1); /* Standard syntax */
 
 
 .boderAmarillo{
-  width: 5px;
+  width: 4px;
   height: 100%;
   background-color: #ffc400 !important;
   position: absolute;
@@ -901,7 +924,7 @@ transform: scale(1.1,1.1); /* Standard syntax */
   position: relative;
   overflow-y:  hidden;
   overflow-x: hidden;
-  padding-top: 0px;
+  padding-top: 20px;
   margin: 0 auto;
   float: right;
 } 
@@ -918,6 +941,11 @@ transform: scale(1.1,1.1); /* Standard syntax */
   text-align: justify;
 } 
 
+
+.fechaM{
+  display: none;
+  text-transform: lowercase;
+}
  
 .contenidoPost blockquote p{
     font-size: 21px;

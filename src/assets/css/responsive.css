@@ -173,12 +173,42 @@
 /* ---- Responsive: 1366px
 -------------------------------------------------------- */
 
+@media only screen and (max-width:1440px) {
+
+.menus{
+    width: 90%;
+  font-size: 20px;
+    line-height: 24px;
+}
+
+.menus > .Bloques:hover{
+  font-family: "Roboto-Bold";
+  font-size: 22px;
+  line-height: 26px;
+}
+
+
+.menu-current{
+  font-family: "Roboto-Bold";
+  font-size: 24px;
+  line-height: 28px;
+}
+
+
+}
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1366px
+-------------------------------------------------------- */
+
 @media only screen and (max-width:1366px) {
 
 .bloqueX {
     width: 230px;
   }
 
+
+  
 
 
 }/* 1366 */
@@ -199,6 +229,8 @@
   line-height: 14px; 
 }
 
+
+
 }/* 1280 */
 
 
@@ -213,24 +245,7 @@
   }
 
 
-  .menus{
-  	width: 90%;
-	font-size: 20px;
-    line-height: 24px;
-}
 
-.menus > .Bloques:hover{
-  font-family: "Roboto-Bold";
-  font-size: 24px;
-  line-height: 28px;
-}
-
-
-.menu-current{
-  font-family: "Roboto-Bold";
-  font-size: 24px;
-  line-height: 28px;
-}
 
 .logo-cultura-footer{
   max-width: 140px;
@@ -366,6 +381,9 @@
 
 @media only screen and (max-width:1024px) {
  
+ .boderAmarillo{
+  left: 8%;
+}
 	
 }/* 1024 */
 
@@ -542,8 +560,8 @@
 }
 
 .Seccion-titulo > .BloqueFecha > .mes {
-    font-size: 22px;
-    line-height: 22px;
+    font-size: 20px;
+    line-height: 20px;
 }
 
 
@@ -560,7 +578,7 @@
 
 .boderAmarillo {
     width: 3px;
-    left: 40px;
+    left: 45px;
 }
 
 
@@ -706,6 +724,11 @@ transform:none;
  
 }
 
+.Seccion-titulo > .BloqueFecha > .mes {
+    font-size: 18px;
+    line-height: 18px;
+}
+
 
 
 }/* 900 */
@@ -747,6 +770,9 @@ transform:none;
 .Bloque_GrandeF > .bloqueX > .imagen_full{
   display: none !important;
 }
+
+ 
+
 
 
 }/* 900 */
@@ -837,20 +863,41 @@ transform:none;
 }
 
 .Seccion-titulo > .BloqueFecha > .mes {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 16px;
 }
 
 
 .boderAmarillo {
     width: 3px;
-    left: 30px;
+    left: 35px;
+}
+
+
+.Seccion-titulo  > .BloqueDatos {
+    width: 80%;
+    height: auto;
+    padding-left: 15px;
+    float: left;
 }
 
 
 
+.BloqueFecha{
+  display: none;
+}
 
+.boderAmarillo{
+  display: none;
+}
 
+.Seccion-titulo > .BloqueDatos{
+  width: 100%;
+}
+
+.fechaM{
+  display: inline-block;
+}
 
 
 }/* 900 */
