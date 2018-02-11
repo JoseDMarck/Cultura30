@@ -642,7 +642,6 @@ transform: scale(1.1,1.1); /* Standard syntax */
   -webkit-transform: translateZ(0);
 
 }
-
  
 
 .bloqueX > .CuadroInformacion > .dia{
@@ -660,6 +659,47 @@ transform: scale(1.1,1.1); /* Standard syntax */
 } 
 
 .bloqueX > .CuadroInformacion > .mes{
+ width: 100%;
+  height: auto;
+  position: relative;
+  margin-left: 20px;
+  color: #FFF;
+  font-family: "Roboto-Light-Italic";
+  font-size: 28px;
+  line-height: 29px; 
+  text-shadow: 2px 2px 8px #000;
+  text-transform: lowercase;
+  pointer-events : none;
+
+} 
+
+
+.bloqueX2 > .CuadroInformacion{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 999;
+  pointer-events : none;
+  -webkit-transform: translateZ(0);
+
+}
+ 
+
+.bloqueX2 > .CuadroInformacion > .dia{
+  width: 100%;
+  height: auto;
+  margin-left: 20px;
+  margin-top: 30px;
+  position: relative;
+  color: #FFF;
+  font-family: "Roboto-Bold-Italic";
+  font-size: 40px;
+  line-height: 40px;
+  text-shadow: 4px 4px 12px #000;
+
+} 
+
+.bloqueX2 > .CuadroInformacion > .mes{
  width: 100%;
   height: auto;
   position: relative;
@@ -1485,7 +1525,6 @@ filter: grayscale(0%);
   background: #43AA88 !important;
   border: solid 1px  #43AA88;
   margin-bottom: 10px;
-  
 }
 
 .linkRedes{

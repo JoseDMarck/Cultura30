@@ -692,6 +692,11 @@
   height: 400px;
 }
 
+.BloqueOX:hover{
+  -ms-transform: none;
+  -webkit-transform:  none;
+  transform:none;
+}
 
 }
 
@@ -742,6 +747,8 @@
     line-height: 26px !important;
 }
 
+
+ 
 
 }/* 900 */
 
@@ -905,6 +912,20 @@ transform:none;
 }
 
 
+.bloqueX2 > .CuadroInformacion > .dia{
+      margin-top: 10px;
+      font-size: 30px;
+    line-height: 30px;
+}
+
+ .bloqueX2 > .CuadroInformacion > .mes {
+     
+    font-size: 22px;
+    line-height: 26px;
+    
+}
+
+
 }/* 520 */
 
 /* --------------------------------------------------------
@@ -1065,7 +1086,7 @@ transform:none;
 }
  
  .BloqueOX{
-    margin-bottom: 0px;
+    margin-bottom: 20px;
  }
 
 
@@ -1103,6 +1124,11 @@ transform:none;
   height: 220px;
 }
 
+.titulo {
+    font-size: 20px;
+    line-height: 20px;
+}
+
 
 }
 
@@ -1121,7 +1147,22 @@ transform:none;
 
 .Bloque_GrandeF {
   width: 92% !important;
+  height: 300px !important;
+
 }
+
+.bloqueX2 > .CuadroInformacion > .dia{
+      margin-top: 20px;
+      font-size: 40px;
+    line-height: 40px;
+}
+
+
+.CuadroEventos > .titulo {
+    font-size: 24px;
+    line-height: 28px;
+}
+
 
 }
 

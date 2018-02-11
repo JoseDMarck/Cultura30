@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { Post } from '../post';
 import { PostsService } from '../posts.service';
 import { Router } from '@angular/router';
 import { trigger, state, style, animate,transition } from '@angular/animations';
+import { DomSanitizer } from '@angular/platform-browser';
+
 
 
 @Component({
@@ -68,7 +70,7 @@ export class InicioComponent implements OnInit {
   loadMoreVisible : boolean;
   selectedClass: number;
 
-  constructor(private postsService: PostsService, private router: Router) { 
+  constructor(private postsService: PostsService, private router: Router, private sanitizer: DomSanitizer, elm: ElementRef) { 
     this.arregloCountCat = [];
     this.loadMoreVisible = false
   }
@@ -305,8 +307,13 @@ export class InicioComponent implements OnInit {
 SelecccionMenu(slug:string ) {
     this.router.navigate(["publicaciones-"+slug]);
     console.log(slug);
-  
 }
 
+
+ getBackground(image) {
+    return this.sanitizer.bypassSecurityTrustStyle(`linear-gradient(rgba(29, 29, 29, 0), rgba(16, 16, 23, 0.5)), url(${image})`);
+  }
+
+  
 
 }

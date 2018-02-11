@@ -10,9 +10,7 @@
 
 <div class="ScrollPost ">
   
-  <div class="BlurTop">
-       <img src="assets/images/home/blur.png" class="imagen_min_posts">
-  </div>
+  
 
  
 
@@ -26,19 +24,20 @@
     </div> 
     
     <!-- Seccion para el menu -->
-    <div *ngFor="let post of posts_musica; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+    <div *ngFor="let post of posts_musica; let i = index;" (click)="selectPost(post.slug)" class="BloqueOX  BloqueOut-{{i+1}}" >
 
       <div class="Mestitulo" style="display: none;">
              {{ post.mensualidad }}
       </div>
       
-      <div class="bloqueX color-azul {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-azul {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-azul"></div>
 
-         <div class="CuadroInformacion">
-             
+           <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
+         <div class="CuadroInformacion">    
 
             <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
             <div class="mes">{{ post.Mes }}</div>
@@ -56,9 +55,7 @@
 
          </div><!-- Cuadro informacion -->
 
-      
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
-         <img src="{{ post.imagen_minsize }}" class="imagen_full">
+    
       </div>
 
     </div><!-- col -->
@@ -81,19 +78,24 @@
 
 
     <!-- Seccion para el menu -->
-    <div *ngFor="let post of posts_cine; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+    <div *ngFor="let post of posts_cine; let i = index;" (click)="selectPost(post.slug)" class="BloqueOX BloqueOut-{{i+1}}" >
 
       <div class="Mestitulo" style="display: none;">
              {{ post.mensualidad }}
       </div>
       
-      <div class="bloqueX color-verde {{post.imagen_sin_post}}">
-     
+      <div class="bloqueX2 color-verde {{post.imagen_sin_post}}">
+          
+
 
          <div class="cuadrito color-verde"></div>
 
+        <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>                   
+
+        
+
          <div class="CuadroInformacion">
-             
+          
 
             <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
             <div class="mes">{{ post.Mes }}</div>
@@ -111,9 +113,7 @@
 
          </div><!-- Cuadro informacion -->
 
-      
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
-         <img src="{{ post.imagen_minsize }}" class="imagen_full">
+       
          
       </div>
 
@@ -139,7 +139,7 @@
 
     
     <!-- Seccion para el menu -->
-    <div  *ngFor="let post of posts_librosRevistas; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}">
+    <div  *ngFor="let post of posts_librosRevistas; let i = index;" (click)="selectPost(post.slug)" class="BloqueOX BloqueOut-{{i+1}}">
         
 
 
@@ -147,10 +147,14 @@
              {{ post.mensualidad }}
       </div>
       
-      <div class="bloqueX color-rosa {{post.imagen_sin_post}}">
-     
+      <div class="bloqueX2 color-rosa {{post.imagen_sin_post}}">
+      
+
 
          <div class="cuadrito color-rosa"></div>
+         
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
              
@@ -171,9 +175,7 @@
 
          </div><!-- Cuadro informacion -->
 
-      
-        <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
-        <img src="{{ post.imagen_minsize }}" class="imagen_full">
+       
       </div>
 
     </div><!-- col -->
@@ -200,7 +202,7 @@
 
     
     <!-- Seccion para el menu -->
-    <div  *ngFor="let post of posts_radioPodcast; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}">
+    <div  *ngFor="let post of posts_radioPodcast; let i = index;" (click)="selectPost(post.slug)" class="BloqueOX BloqueOut-{{i+1}}">
         
 
 
@@ -208,10 +210,13 @@
              {{ post.mensualidad }}
       </div>
       
-      <div class="bloqueX color-amarillo {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-amarillo {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-amarillo"></div>
+
+        <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
              
@@ -232,9 +237,6 @@
 
          </div><!-- Cuadro informacion -->
 
-      
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
-         <img src="{{ post.imagen_minsize }}" class="imagen_full">
       </div>
 
     </div><!-- col -->
@@ -252,10 +254,13 @@
     <div class="nombreSeccion"  style="display: block !important; cursor: pointer;" (click)="SelecccionMenu('gastronomia');">
        Gastronomía
       <div class="colorSeccion color-azul" style="width: 220px;"></div>
+
+
+
     </div>
     
     <!-- Seccion para el menu -->
-    <div  *ngFor="let post of posts_gastronomia; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}">
+    <div  *ngFor="let post of posts_gastronomia; let i = index;" (click)="selectPost(post.slug)" class="BloqueOX BloqueOut-{{i+1}}">
         
 
 
@@ -263,10 +268,13 @@
              {{ post.mensualidad }}
       </div>
       
-      <div class="bloqueX color-azul {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-azul {{post.imagen_sin_post}}">
      
 
-         <div class="cuadrito color-azul"></div>
+        <div class="cuadrito color-azul"></div>
+
+        <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
              
@@ -286,10 +294,6 @@
             </div><!-- CuadroEventos -->
          </div><!-- Cuadro informacion -->
 
-      
-        <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
-        <img src="{{ post.imagen_minsize }}" class="imagen_full">
-    
 
       </div>
 
@@ -314,19 +318,23 @@
      <div class="nombreSeccion" style="display: block !important; cursor: pointer;" (click)="SelecccionMenu('artesania');"> 
        Artesanías
       <div class="colorSeccion color-verde" style="width: 170px;"></div>
+
     </div>
     
     <!-- Seccion para el menu -->
-    <div  *ngFor="let post of posts_artesania; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+    <div  *ngFor="let post of posts_artesania; let i = index;" (click)="selectPost(post.slug)" class="BloqueOX BloqueOut-{{i+1}}" >
 
       <div class="Mestitulo" style="display: none;">
              {{ post.mensualidad }}
       </div>
       
-      <div class="bloqueX color-verde {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-verde {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-verde"></div>
+
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
              
@@ -348,8 +356,7 @@
          </div><!-- Cuadro informacion -->
 
       
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
-         <img src="{{ post.imagen_minsize }}" class="imagen_full">
+
       </div>
 
     </div><!-- col -->
@@ -369,7 +376,7 @@
     </div>
     
     <!-- Seccion para el menu -->
-    <div  *ngFor="let post of posts_viajes; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+    <div  *ngFor="let post of posts_viajes; let i = index;" (click)="selectPost(post.slug)" class="BloqueOX BloqueOut-{{i+1}}" >
         
 
 
@@ -377,10 +384,12 @@
              {{ post.mensualidad }}
       </div>
       
-      <div class="bloqueX color-rosa {{post.imagen_sin_post}}">
-     
+      <div class="bloqueX2 color-rosa {{post.imagen_sin_post}}">
 
          <div class="cuadrito color-rosa"></div>
+         
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
              
@@ -402,8 +411,7 @@
          </div><!-- Cuadro informacion -->
 
       
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
-          <img src="{{ post.imagen_minsize }}" class="imagen_full">
+
       </div>
 
     </div><!-- col -->
@@ -426,7 +434,7 @@
     </div>
    
     <!-- Seccion para el menu -->
-    <div *ngFor="let post of posts_trueques; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+    <div *ngFor="let post of posts_trueques; let i = index;" (click)="selectPost(post.slug)" class="BloqueOX BloqueOut-{{i+1}}" >
         
 
 
@@ -435,10 +443,13 @@
              {{ post.mensualidad }}
       </div>
       
-      <div class="bloqueX color-amarillo {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-amarillo {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-amarillo"></div>
+
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
              
@@ -459,9 +470,7 @@
 
          </div><!-- Cuadro informacion -->
 
-      
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
-         <img src="{{ post.imagen_minsize }}" class="imagen_full">
+    
       </div>
 
     </div><!-- col -->
@@ -487,7 +496,7 @@
 
 
     <!-- Seccion para el menu -->
-    <div  *ngFor="let post of posts_espacios; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+    <div  *ngFor="let post of posts_espacios; let i = index;" (click)="selectPost(post.slug)" class="BloqueOX BloqueOut-{{i+1}}" >
         
 
 
@@ -496,10 +505,13 @@
       </div>
 
       
-      <div class="bloqueX color-verde {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-verde {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-verde"></div>
+
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
              
@@ -520,8 +532,7 @@
          </div><!-- Cuadro informacion -->
 
       
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
-         <img src="{{ post.imagen_minsize }}" class="imagen_full">
+  
          
       </div>
 
@@ -547,7 +558,7 @@
 
 
     <!-- Seccion para el menu -->
-    <div  *ngFor="let post of posts_exposiciones; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+    <div  *ngFor="let post of posts_exposiciones; let i = index;" (click)="selectPost(post.slug)" class="BloqueOX BloqueOut-{{i+1}}" >
         
 
 
@@ -555,10 +566,11 @@
              {{ post.mensualidad }}
       </div>
       
-      <div class="bloqueX color-rosa {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-rosa {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-rosa"></div>
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
 
          <div class="CuadroInformacion">
              
@@ -579,9 +591,7 @@
 
          </div><!-- Cuadro informacion -->
 
-      
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
-         <img src="{{ post.imagen_minsize }}" class="imagen_full">
+ 
          
       </div>
 
@@ -604,7 +614,7 @@
 
 
     <!-- Seccion para el menu -->
-    <div *ngFor="let post of posts_conferencias; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+    <div *ngFor="let post of posts_conferencias; let i = index;" (click)="selectPost(post.slug)" class="BloqueOX BloqueOut-{{i+1}}" >
         
 
 
@@ -612,10 +622,13 @@
              {{ post.mensualidad }}
       </div>
       
-      <div class="bloqueX color-amarillo {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-amarillo {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-amarillo"></div>
+
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
              
@@ -636,8 +649,7 @@
          </div><!-- Cuadro informacion -->
 
       
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
-         <img src="{{ post.imagen_minsize }}" class="imagen_full">
+ 
          
       </div>
 
@@ -659,14 +671,17 @@
     </div> 
     
     <!-- Seccion para el menu -->
-    <div *ngFor="let post of posts_opinion; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+    <div *ngFor="let post of posts_opinion; let i = index;" (click)="selectPost(post.slug)" class="BloqueOX BloqueOut-{{i+1}}" >
 
     
       
-      <div class="bloqueX color-azul {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-azul {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-azul"></div>
+
+        <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
           <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
@@ -685,8 +700,6 @@
          </div><!-- Cuadro informacion -->
 
       
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
-         <img src="{{ post.imagen_minsize }}" class="imagen_full">
       </div>
 
     </div><!-- col -->
@@ -711,14 +724,17 @@
     </div> 
     
     <!-- Seccion para el menu -->
-    <div *ngFor="let post of posts_teatro; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+    <div *ngFor="let post of posts_teatro; let i = index;" (click)="selectPost(post.slug)" class="BloqueOX BloqueOut-{{i+1}}" >
 
     
       
-      <div class="bloqueX color-teatro {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-teatro {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-teatro"></div>
+
+        <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
           <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
@@ -735,10 +751,7 @@
 
             </div><!-- CuadroEventos -->
          </div><!-- Cuadro informacion -->
-
-      
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
-         <img src="{{ post.imagen_minsize }}" class="imagen_full">
+ 
       </div>
 
     </div><!-- col -->
@@ -762,7 +775,7 @@
     </div>
     
     <!-- Seccion para el menu -->
-    <div  *ngFor="let post of posts_fotografia; let i = index;" (click)="selectPost(post.slug)" class="BloquesPostList BloqueOut-{{i+1}}" >
+    <div  *ngFor="let post of posts_fotografia; let i = index;" (click)="selectPost(post.slug)" class="BloqueOX BloqueOut-{{i+1}}" >
         
 
 
@@ -770,10 +783,13 @@
              {{ post.mensualidad }}
       </div>
       
-      <div class="bloqueX color-rosa {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-rosa {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-rosa"></div>
+
+        <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
              
@@ -793,16 +809,13 @@
             </div><!-- CuadroEventos -->
 
          </div><!-- Cuadro informacion -->
-
-      
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
-          <img src="{{ post.imagen_minsize }}" class="imagen_full">
+ 
       </div>
 
     </div><!-- col -->
 
         <div style="clear: both; width: 100%; height:10px;"></div>
-        <div style="clear: both; width: 100%; height:200px;"></div>
+        <div style="clear: both; width: 100%; height:40px;"></div>
  
  
   </div>
