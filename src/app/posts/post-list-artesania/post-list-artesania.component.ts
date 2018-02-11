@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, ElementRef} from '@angular/core';
 import { Post } from '../post';
 import { PostsService } from '../posts.service';
 import { Router } from '@angular/router';
 import { trigger, state, style, animate,transition } from '@angular/animations';
+import { DomSanitizer } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-post-list-artesania',
@@ -40,7 +42,7 @@ export class PostListArtesaniaComponent implements OnInit {
 
 
 
-  constructor(private postsService: PostsService, private router: Router) { 
+  constructor(private postsService: PostsService, private router: Router, private sanitizer: DomSanitizer, elm: ElementRef) { 
     this.post_count = 20;
     this.arregloCountCat = [];
     this.loadMoreVisible = false
@@ -138,5 +140,10 @@ export class PostListArtesaniaComponent implements OnInit {
    //this.router.navigate([slug]);
     console.log("Slug normal", slug)
 }
+
+  getBackground(image) {
+    return this.sanitizer.bypassSecurityTrustStyle(`linear-gradient(rgba(29, 29, 29, 0), rgba(16, 16, 23, 0.5)), url(${image})`);
+  }
+ 
 
 }
