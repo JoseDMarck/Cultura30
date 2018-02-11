@@ -9,11 +9,7 @@
 <body  [@fadeInAnimation]="stateName">
 
 <div class="ScrollPost">
-  
-  <div class="BlurTop">
-       <img src="assets/images/home/blur.png" class="imagen_min_posts">
-  </div>
-
+ 
 
   <div class="">
 
@@ -27,18 +23,21 @@
 
     
     <!-- Seccion para el menu -->
-    <div class="BloquesPostList {{ post.tipo_bloque }} {{ post.tamano_bloque }}" *ngFor="let post of posts" (click)="selectPost(post.slug)">
+    <div class="BloqueOX {{ post.tipo_bloque }} {{ post.tamano_bloque }}" *ngFor="let post of posts" (click)="selectPost(post.slug)">
         
       <div class="Mestitulo" style="display: none;">
              {{ post.mensualidad }}
       </div>
       
-      <div class="bloqueX color-rosa {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-rosa {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-rosa"></div>
 
          <div class="CuadroInformacion">
+
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
              
             <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
             <div class="mes">{{ post.Mes }}</div>
@@ -56,9 +55,7 @@
 
          </div><!-- Cuadro informacion -->
 
-      
-        <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
-        <img src="{{ post.imagen_minsize }}" class="imagen_full">
+       
       </div>
 
     </div><!-- col -->
@@ -70,7 +67,7 @@
     </div><!-- vermás -->
 
 
-    <div style="clear: both; width: 100%; height:200px;"></div>
+    <div style="clear: both; width: 100%; height:30px;"></div>
 
    
 
