@@ -1,10 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input,ElementRef } from '@angular/core';
 import { Post } from '../post';
 import { PostsService } from '../posts.service';
 import { Router } from '@angular/router';
 import { trigger, state, style, animate,transition } from '@angular/animations';
 import { CeiboShare } from 'ng2-social-share';
 import { MetaService } from '@ngx-meta/core';
+import { DomSanitizer } from '@angular/platform-browser';
+
 
 
   
@@ -76,7 +78,7 @@ export class PostListComponent implements OnInit {
    
 
 
-constructor( private postsService: PostsService, private router: Router, private readonly meta: MetaService ) {
+constructor( private postsService: PostsService, private router: Router, private readonly meta: MetaService, private sanitizer: DomSanitizer, elm: ElementRef ) {
     this.post_count = 20;
     this.arregloCountCat = [];
     this.loadMoreVisible = false
@@ -372,6 +374,11 @@ selectPost(slug) {
       });
   }
 
+
+ getBackground(image) {
+    return this.sanitizer.bypassSecurityTrustStyle(`linear-gradient(rgba(29, 29, 29, 0), rgba(16, 16, 23, 0.5)), url(${image})`);
+  }
+ 
 
 
 

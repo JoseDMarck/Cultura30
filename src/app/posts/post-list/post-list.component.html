@@ -23,91 +23,6 @@
 
 
 
-  <!-- 11 - NOVIEMBRE  ============================ -->
-
-    <div class="" *ngIf="exist_post_noviembre">
-
-    <div class="nombreSeccion" style="display: block !important;">
-      Noviembre
-    </div> 
-
-
-
-    <!-- Seccion para el menu -->
-    <div class="BloquesPostList" *ngFor="let post of posts_noviembre" (click)="selectPost(post.slug)">
-        
-      
-      <div class="bloqueX color-amarillo {{post.imagen_sin_post}}">
-     
-
-         <div class="cuadrito color-amarillo"></div>
-
-         <div class="CuadroInformacion">
-            <div class="dia">{{ post.Dia }}</div>
-            <div class="mes">{{ post.Mes }}</div>
-
-            <div class="CuadroEventos">
-                <div class="titulo" [innerHTML]="post.title.rendered"></div>
-                <div class="lugar">{{ post.Lugar }}</div>
-                <div class="hora">{{ post.Hora }}</div>
-
-            </div><!-- CuadroEventos -->
-
-         </div><!-- Cuadro informacion -->
-
-      
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
-      </div>
-
-    </div><!-- col -->
-
-        <div style="clear: both; width: 100%; height:10px;"></div>
-    
-  
-  </div>
-
-
-   <!-- 12 - DICIEMBRE  ============================ -->
-
-    <div class="" *ngIf="exist_post_diciembre">
-
-    <div class="nombreSeccion" style="display: block !important;">
-      Diciembre
-    </div> 
-
-
-
-    <!-- Seccion para el menu -->
-    <div class="BloquesPostList" *ngFor="let post of posts_diciembre" (click)="selectPost(post.slug)">
-        
-      
-      <div class="bloqueX color-amarillo {{post.imagen_sin_post}}">
-     
-
-         <div class="cuadrito color-amarillo"></div>
-
-         <div class="CuadroInformacion">
-            <div class="dia">{{ post.Dia }}</div>
-            <div class="mes">{{ post.Mes }}</div>
-
-            <div class="CuadroEventos">
-                <div class="titulo" [innerHTML]="post.title.rendered"></div>
-                <div class="lugar">{{ post.Lugar }}</div>
-                <div class="hora">{{ post.Hora }}</div>
-
-            </div><!-- CuadroEventos -->
-
-         </div><!-- Cuadro informacion -->
-
-      
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
-      </div>
-
-    </div><!-- col -->
-
-        <div style="clear: both; width: 100%; height:10px;"></div>
-
-  </div>
 
 
   <!-- 1- ENERO ============================ -->
@@ -120,13 +35,15 @@
 
 
     <!-- Seccion para el menu -->
-    <div class="BloquesPostList" *ngFor="let post of posts_enero" (click)="selectPost(post.slug)">
+    <div class="BloqueOX" *ngFor="let post of posts_enero" (click)="selectPost(post.slug)">
         
       
-      <div class="bloqueX color-amarillo {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-amarillo {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-amarillo"></div>
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
             <div class="dia">{{ post.Dia }}</div>
@@ -142,7 +59,7 @@
          </div><!-- Cuadro informacion -->
 
       
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+         
       </div>
 
     </div><!-- col -->
@@ -163,13 +80,15 @@
 
 
     <!-- Seccion para el menu -->
-    <div class="BloquesPostList" *ngFor="let post of posts_febrero" (click)="selectPost(post.slug)">
+    <div class="BloqueOX" *ngFor="let post of posts_febrero" (click)="selectPost(post.slug)">
         
       
-      <div class="bloqueX color-amarillo {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-amarillo {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-amarillo"></div>
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
             <div class="dia">{{ post.Dia }}</div>
@@ -185,7 +104,7 @@
          </div><!-- Cuadro informacion -->
 
       
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+         
       </div>
 
     </div><!-- col -->
@@ -208,13 +127,15 @@
 
 
     <!-- Seccion para el menu -->
-    <div class="BloquesPostList" *ngFor="let post of posts_marzo" (click)="selectPost(post.slug)">
+    <div class="BloqueOX " *ngFor="let post of posts_marzo" (click)="selectPost(post.slug)">
         
       
-      <div class="bloqueX color-amarillo {{post.imagen_sin_post}}">
-     
+      <div class="bloqueX2 color-amarillo {{post.imagen_sin_post}}">
+      
 
          <div class="cuadrito color-amarillo"></div>
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
             <div class="dia">{{ post.Dia }}</div>
@@ -229,8 +150,7 @@
 
          </div><!-- Cuadro informacion -->
 
-      
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+    
       </div>
 
     </div><!-- col -->
@@ -253,13 +173,15 @@
 
 
     <!-- Seccion para el menu -->
-    <div class="BloquesPostList" *ngFor="let post of posts_abril" (click)="selectPost(post.slug)">
+    <div class="BloqueOX" *ngFor="let post of posts_abril" (click)="selectPost(post.slug)">
         
       
-      <div class="bloqueX color-amarillo {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-amarillo {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-amarillo"></div>
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
             <div class="dia">{{ post.Dia }}</div>
@@ -275,7 +197,7 @@
          </div><!-- Cuadro informacion -->
 
       
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+         
       </div>
 
     </div><!-- col -->
@@ -298,13 +220,15 @@
 
 
     <!-- Seccion para el menu -->
-    <div class="BloquesPostList" *ngFor="let post of posts_mayo" (click)="selectPost(post.slug)">
+    <div class="BloqueOX" *ngFor="let post of posts_mayo" (click)="selectPost(post.slug)">
         
       
-      <div class="bloqueX color-amarillo {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-amarillo {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-amarillo"></div>
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
             <div class="dia">{{ post.Dia }}</div>
@@ -320,7 +244,7 @@
          </div><!-- Cuadro informacion -->
 
       
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+         
       </div>
 
     </div><!-- col -->
@@ -343,13 +267,15 @@
 
 
     <!-- Seccion para el menu -->
-    <div class="BloquesPostList" *ngFor="let post of posts_junio" (click)="selectPost(post.slug)">
+    <div class="BloqueOX" *ngFor="let post of posts_junio" (click)="selectPost(post.slug)">
         
       
-      <div class="bloqueX color-amarillo {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-amarillo {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-amarillo"></div>
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
             <div class="dia">{{ post.Dia }}</div>
@@ -365,7 +291,7 @@
          </div><!-- Cuadro informacion -->
 
       
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+         
       </div>
 
     </div><!-- col -->
@@ -388,13 +314,15 @@
 
 
     <!-- Seccion para el menu -->
-    <div class="BloquesPostList" *ngFor="let post of posts_julio" (click)="selectPost(post.slug)">
+    <div class="BloqueOX" *ngFor="let post of posts_julio" (click)="selectPost(post.slug)">
         
       
-      <div class="bloqueX color-amarillo {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-amarillo {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-amarillo"></div>
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
             <div class="dia">{{ post.Dia }}</div>
@@ -410,7 +338,7 @@
          </div><!-- Cuadro informacion -->
 
       
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+         
       </div>
 
     </div><!-- col -->
@@ -432,13 +360,15 @@
 
 
     <!-- Seccion para el menu -->
-    <div class="BloquesPostList" *ngFor="let post of posts_agosto" (click)="selectPost(post.slug)">
+    <div class="BloqueOX" *ngFor="let post of posts_agosto" (click)="selectPost(post.slug)">
         
       
-      <div class="bloqueX color-amarillo {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-amarillo {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-amarillo"></div>
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
             <div class="dia">{{ post.Dia }}</div>
@@ -454,7 +384,7 @@
          </div><!-- Cuadro informacion -->
 
       
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+         
       </div>
 
     </div><!-- col -->
@@ -477,13 +407,15 @@
 
 
     <!-- Seccion para el menu -->
-    <div class="BloquesPostList" *ngFor="let post of posts_septiembre" (click)="selectPost(post.slug)">
+    <div class="BloqueOX" *ngFor="let post of posts_septiembre" (click)="selectPost(post.slug)">
         
       
-      <div class="bloqueX color-amarillo {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-amarillo {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-amarillo"></div>
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
             <div class="dia">{{ post.Dia }}</div>
@@ -499,7 +431,7 @@
          </div><!-- Cuadro informacion -->
 
       
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+         
       </div>
 
     </div><!-- col -->
@@ -524,13 +456,15 @@
 
 
     <!-- Seccion para el menu -->
-    <div class="BloquesPostList" *ngFor="let post of posts_octubre" (click)="selectPost(post.slug)">
+    <div class="BloqueOX" *ngFor="let post of posts_octubre" (click)="selectPost(post.slug)">
         
       
-      <div class="bloqueX color-amarillo {{post.imagen_sin_post}}">
+      <div class="bloqueX2 color-amarillo {{post.imagen_sin_post}}">
      
 
          <div class="cuadrito color-amarillo"></div>
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
 
          <div class="CuadroInformacion">
             <div class="dia">{{ post.Dia }}</div>
@@ -546,7 +480,7 @@
          </div><!-- Cuadro informacion -->
 
       
-         <img src="{{ post.imagen_thumbsize }}" class="img-fluid imagen_min_posts">
+         
       </div>
 
     </div><!-- col -->
@@ -556,7 +490,100 @@
   
   </div>
 
-    <div style="clear: both; width: 100%; height:200px;"></div>
+
+
+
+  <!-- 11 - NOVIEMBRE  ============================ -->
+
+    <div class="" *ngIf="exist_post_noviembre">
+
+    <div class="nombreSeccion" style="display: block !important;">
+      Noviembre
+    </div> 
+
+
+
+    <!-- Seccion para el menu -->
+    <div class="BloqueOX" *ngFor="let post of posts_noviembre" (click)="selectPost(post.slug)">
+        
+      
+      <div class="bloqueX2 color-amarillo {{post.imagen_sin_post}}">
+     
+
+         <div class="cuadrito color-amarillo"></div>
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
+
+         <div class="CuadroInformacion">
+            <div class="dia">{{ post.Dia }}</div>
+            <div class="mes">{{ post.Mes }}</div>
+
+            <div class="CuadroEventos">
+                <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                <div class="lugar">{{ post.Lugar }}</div>
+                <div class="hora">{{ post.Hora }}</div>
+
+            </div><!-- CuadroEventos -->
+
+         </div><!-- Cuadro informacion -->
+
+      
+      </div>
+
+    </div><!-- col -->
+
+        <div style="clear: both; width: 100%; height:10px;"></div>
+    
+  
+  </div>
+
+
+   <!-- 12 - DICIEMBRE  ============================ -->
+
+    <div class="" *ngIf="exist_post_diciembre">
+
+    <div class="nombreSeccion" style="display: block !important;">
+      Diciembre
+    </div> 
+
+
+
+    <!-- Seccion para el menu -->
+    <div class="BloqueOX" *ngFor="let post of posts_diciembre" (click)="selectPost(post.slug)">
+        
+      
+      <div class="bloqueX2 color-amarillo {{post.imagen_sin_post}}">
+     
+
+         <div class="cuadrito color-amarillo"></div>
+         <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+
+
+         <div class="CuadroInformacion">
+            <div class="dia">{{ post.Dia }}</div>
+            <div class="mes">{{ post.Mes }}</div>
+
+            <div class="CuadroEventos">
+                <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                <div class="lugar">{{ post.Lugar }}</div>
+                <div class="hora">{{ post.Hora }}</div>
+
+            </div><!-- CuadroEventos -->
+
+         </div><!-- Cuadro informacion -->
+
+      
+      </div>
+
+    </div><!-- col -->
+
+        <div style="clear: both; width: 100%; height:10px;"></div>
+
+  </div>
+
+
+
+    <div style="clear: both; width: 100%; height:30px;"></div>
 
 
 
