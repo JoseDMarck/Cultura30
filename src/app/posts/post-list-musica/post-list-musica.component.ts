@@ -1,9 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ElementRef} from '@angular/core';
 import { Post } from '../post';
 import { PostsService } from '../posts.service';
 import { Router } from '@angular/router';
 import { trigger, state, style, animate,transition } from '@angular/animations';
 import { MetaService } from '@ngx-meta/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 @Component({
@@ -47,7 +48,7 @@ export class PostListMusicaComponent implements OnInit {
 
 
 
-  constructor( private postsService: PostsService, private router: Router,  private readonly meta: MetaService) {
+  constructor( private postsService: PostsService, private router: Router,  private readonly meta: MetaService, private sanitizer: DomSanitizer, elm: ElementRef) {
 
     this.post_count = 20;
     this.arregloCountCat = [];
@@ -139,12 +140,12 @@ export class PostListMusicaComponent implements OnInit {
     this.meta.setTag('og:title', 'Articulos de Música 3.0');
     this.meta.setTag('og:description', 'Cultura 3.0 es un suplemento digital de Revolción 3.0');
     this.meta.setTag('og:image', 'http://culturatrespuntocero.com/images/generales/logo.png');*/
-
-
   }
 
 
-
+  getBackground(image) {
+    return this.sanitizer.bypassSecurityTrustStyle(`linear-gradient(rgba(29, 29, 29, 0), rgba(16, 16, 23, 0.5)), url(${image})`);
+  }
  
 
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { Post } from '../post';
 import { PostsService } from '../posts.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
@@ -15,13 +15,15 @@ import { DomSanitizer } from '@angular/platform-browser';
 
 export class PostSingleComponent implements OnInit {
 
-	post: Post;
-  imageUrl:string;
+ post: Post;
+ imageUrl:string;
  slugArray: any;
  TweetTitulo: any;
  repoUrl:any;
+ repoUrlWA: any;
+
  
- constructor(private postsService: PostsService, private route: ActivatedRoute, private sanitizer: DomSanitizer) { 
+ constructor(private postsService: PostsService, private route: ActivatedRoute, private sanitizer: DomSanitizer, elm: ElementRef) { 
       
   }
 
@@ -38,18 +40,32 @@ export class PostSingleComponent implements OnInit {
         console.log("SlugArray", this.slugArray )
         console.log("TweetTitulo", this.TweetTitulo )
         this.repoUrl = 'http://michoacantrespuntocero.com/cultura30/posts-redes/'+this.slugArray;
+        this.repoUrlWA = 'whatsapp://send?text='+this.repoUrl;
+
    
       });
   }
 
 
+
+
   ngOnInit() {
-  
   	this.route.params.forEach((params: Params) => {
        let slug = params['slug'];
        this.getPost(slug)
     });
 
+    window.scrollTo(0, 0);
+
   }
+
+
+  getBackground(image) {
+    return this.sanitizer.bypassSecurityTrustStyle(`linear-gradient(rgba(29, 29, 29, 0), rgba(16, 16, 23, 0.5)), url(${image})`);
+  }
+
+  sanitize(url:string){
+      return this.sanitizer.bypassSecurityTrustUrl(url);
+   }
 
 }

@@ -15,6 +15,28 @@
 }
 
 
+.BloqueOX{
+  width: 16.66%;
+  height: 450px;
+}
+
+
+ 
+
+}/* 2200 */
+
+
+@media only screen and (max-width:2200px) {
+
+ 
+
+.BloqueOX{
+  width: 20%;
+  height: 450px;
+}
+
+
+ 
 
 }/* 2200 */
 
@@ -36,6 +58,14 @@
 }
 
 
+ 
+
+.BloqueOX{
+  width: 20%;
+  height: 400px;
+}
+
+
 }/* 2200 */
 
 
@@ -47,10 +77,20 @@
 
 @media only screen and (max-width:1920px) {
 
+.ScrollPost{
+  max-width: 1800px;
+}
+
 .BloquesPostList{
   width: 20%;
 } 
  
+
+.BloqueOX{
+  width: 20%;
+  height: 400px;
+}
+
 }/* 19320 */
 
 
@@ -70,7 +110,7 @@
 
 
 .Bloque_GrandeF{
-    width: 75% !important;
+    width: 80% !important;
 }
 
 
@@ -115,6 +155,9 @@
 
 @media only screen and (max-width:1690px) {
 
+.BloqueOX{
+  height: 350px;
+}
 
 } /* 1690 */
 
@@ -129,6 +172,17 @@
 .CuadroEventos > .extracto{
   width: 55%;
 }
+
+
+.BloqueOX{
+  width: 25%;
+  height: 360px;
+}
+
+.Bloque_GrandeF {
+    width: 50% !important;
+}
+
 
 } /* 1520 */
 
@@ -325,6 +379,12 @@
   display: none;
 }
 
+
+.BloqueOX{
+  width: 33.33%;
+  height: 360px;
+}
+
 }/* 1200 */
 
 
@@ -357,6 +417,8 @@
 
 
 
+
+
 }/* 1152 */
 
 
@@ -384,6 +446,19 @@
  .boderAmarillo{
   left: 8%;
 }
+
+
+.BloqueOX{
+  height: 340px;
+}
+
+
+
+.imagenPost{
+  width: 100%;
+  height: auto;
+}
+
 	
 }/* 1024 */
 
@@ -468,7 +543,7 @@
 
  .menu-movil{
 	display: block;
-  height: 100px;
+  height: 80px;
  }
 
 .logo-cultura-web-footer{
@@ -566,14 +641,14 @@
 
 
 .Seccion-titulo > .BloqueDatos > .fecha {
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 16px;
     margin-bottom: 5px;
 }
 
 .Seccion-titulo > .BloqueDatos > .autor {
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 16px;
 }
 
 .boderAmarillo {
@@ -612,6 +687,11 @@
 
  
 
+.BloqueOX{
+  width: 50%;
+  height: 400px;
+}
+
 
 }
 
@@ -648,6 +728,18 @@
 .bloqueX > .CuadroInformacion > .mes {
 	font-size: 24px;
 	line-height: 24px;
+}
+
+
+.Post_Redered {
+    font-size: 18px !important;
+    line-height: 26px !important;
+}
+
+
+ blockquote {
+    font-size: 18px !important;
+    line-height: 26px !important;
 }
 
 
@@ -736,6 +828,19 @@ transform:none;
 
 
 /* --------------------------------------------------------
+/* ---- Responsive: 615px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:615px) {
+
+.BloqueOX{
+  width: 50%;
+  height: 360px;
+}
+
+}
+
+/* --------------------------------------------------------
 /* ---- Responsive: 568px
 -------------------------------------------------------- */
 
@@ -791,6 +896,12 @@ transform:none;
 
 .BloquesPostList{
   height: 270px;
+}
+
+
+.BloqueOX{
+  width: 50%;
+  height: 300px;
 }
 
 
@@ -942,7 +1053,37 @@ transform:none;
 
  
 
+.BloqueOX{
+  width: 50%;
+  height: 250px;
+  border-right: solid 0px rgba(0, 0, 0, 0);
+}
+
+.Bloque_GrandeF {
+  width: 50% !important;
+  height: 250px !important;
+}
  
+ .BloqueOX{
+    margin-bottom: 0px;
+ }
+
+
+
+.bloqueX2 {
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -webkit-box-shadow: 2px 19px 84px -18px rgba(0,0,0,0);
+    -moz-box-shadow: 2px 19px 84px -18px rgba(0,0,0,0);
+    box-shadow: 2px 19px 84px -18px rgba(0,0,0,0);
+
+} 
+
+
+
 
 }/* 900 */
 
@@ -966,6 +1107,26 @@ transform:none;
 }
 
 /* --------------------------------------------------------
+/* ---- Responsive: 400px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:400px) {
+
+.BloqueOX{
+  width: 92%;
+  float: none;
+  margin: 0 auto;
+  height: 380px;
+}
+
+.Bloque_GrandeF {
+  width: 92% !important;
+}
+
+}
+
+
+/* --------------------------------------------------------
 /* ---- Responsive: 900px
 -------------------------------------------------------- */
 
@@ -973,9 +1134,7 @@ transform:none;
 
 .Bloque_GrandeF {
   width: 100% !important;
-  height: 230px !important;
   margin: 0 auto;
-  margin-bottom: 90px !important;
 }
 
 .Bloque_GrandeF > .bloqueX {

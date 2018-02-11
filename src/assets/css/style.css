@@ -777,8 +777,40 @@ transform: scale(1.1,1.1); /* Standard syntax */
 
 
 /* --------------------------------------------------------
-/* ---- INSIDE POSTS
+/* ---- NUEVOS ESTILOS PARA LOS POSTS
 -------------------------------------------------------- */
+
+.imagen-BG-post{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+    background-position: center center!important;
+    background-size: cover!important;
+    display: block!important;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    -o-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+    -webkit-filter: brightness(70%);  
+
+     
+
+        -webkit-box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.1);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.1);
+    box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.1);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+
+}
 
 
 .imagen-BG{
@@ -800,13 +832,99 @@ transform: scale(1.1,1.1); /* Standard syntax */
     -o-transition: .35s ease-in-out;
     transition: .35s ease-in-out;
     -webkit-filter: brightness(70%);  
+
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    cursor: pointer;
+
+
+        -webkit-box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.1);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.1);
+    box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.1);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+
+
 }
 
 
 
+.BloqueOX{
+  width: 25%;
+  height: 350px;
+  float: left;
+  padding: 20px 0 20px 10px;
+  border-right: solid 20px rgba(0, 0, 0, 0);
+  margin-bottom: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.BloqueOX:hover .imagen-BG{
+    width: 105%;
+    height: 105%;
+
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    -o-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+    -webkit-filter: brightness(100%);
 
 
- 
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+}
+
+
+
+.bloqueX2 {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -webkit-box-shadow: 2px 19px 84px -18px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 19px 84px -18px rgba(0,0,0,0.75);
+    box-shadow: 2px 19px 84px -18px rgba(0,0,0,0.75);
+
+} 
+
+
+
+.bloqueX2:hover{
+
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+-ms-transition: all 0.5s ease;
+
+-ms-transform: scale(1.1,1.1); /* IE 9 */
+  -webkit-transform: scale(1.1,1.1); /* Safari */
+transform: scale(1.1,1.1); /* Standard syntax */
+z-index: 9999;
+
+}
 
 
 /* --------------------------------------------------------
@@ -912,9 +1030,16 @@ transform: scale(1.1,1.1); /* Standard syntax */
 
 .imagenPost{
   width: 100%;
-  height: auto;
+  height: 600px;
+  overflow: hidden;
   margin: 0 auto;
   margin-bottom: 30px;
+  position: relative;
+}
+
+.imagenPost img {
+  width: 100%;
+  height: auto;
 }
  
 
@@ -926,36 +1051,30 @@ transform: scale(1.1,1.1); /* Standard syntax */
   overflow-x: hidden;
   padding-top: 20px;
   margin: 0 auto;
-  float: right;
+  float: left;
+  margin-left: 7%;
 } 
 
 
-.contenidoPost p{
-  max-width: 1024px;
-  width: 100%;
-  height: auto;
-  font-family: "Roboto-Light";
-  font-size: 20px;
-  line-height: 28px;
-  color: #000;
-  text-align: justify;
-} 
+.Post_Redered > blockquote {
+    font-size: 21px;
+    line-height: 35px;
+    margin-bottom: 0px;
+    padding-left: 20px;
+    font-family: Roboto-Light;
+    color: rgb(0, 212, 128);
+    border-left: 4px solid rgb(0, 212, 128);
+}
 
+
+ 
 
 .fechaM{
   display: none;
   text-transform: lowercase;
 }
  
-.contenidoPost blockquote p{
-    font-size: 21px;
-    line-height: 35px;
-    color: #00d480 !important;
-    margin-bottom: 0px;
-    border-left: 4px solid #00d480;
-    padding-left: 20px;
-    font-family: "Roboto-Light";
-}
+
 
 .contenidoPost a{
   color: #ff00a1;
@@ -975,7 +1094,7 @@ transform: scale(1.1,1.1); /* Standard syntax */
 -moz-transition: all 0.3s ease;
 -o-transition: all 0.3s ease;
 -ms-transition: all 0.3s ease;
- font-size:18px;
+
 }
 
 
@@ -1026,13 +1145,36 @@ transform: scale(1.1,1.1); /* Standard syntax */
   font-family: "Roboto-Bold-Italic";
   font-size: 40px;
   line-height: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   display: none;
 }
 
 .colorSeccion{
   height: 5px;
 }
+
+
+.Post_Redered {
+  max-width: 1024px;
+  width: 100%;
+  height: auto;
+  font-family: "Roboto-Light";
+  font-size: 20px;
+  line-height: 28px;
+  color: #000;
+  text-align: justify;
+}
+
+
+
+
+ 
+
+.Post_Redered b{
+  font-weight: bold;
+   font-family: "Roboto-Bold";
+}
+
 
 /* --------------------------------------------------------
 /* ---- BLOQUE GRANDE
@@ -1318,12 +1460,15 @@ filter: grayscale(0%);
   color: #FFF !important;
   background: #475898 !important;
   border: solid 1px  #475898;
+  margin-bottom: 10px;
 }
 
 .twitter{
   color: #FFF !important;
   background: #00AAF4 !important;
   border: solid 1px  #00AAF4;
+  margin-bottom: 10px;
+
 }
 
 
@@ -1331,6 +1476,24 @@ filter: grayscale(0%);
   color: #FFF !important;
   background: #DF4D3D !important;
   border: solid 1px  #DF4D3D;
+  margin-bottom: 10px;
+
+}
+
+.whatsapp{
+  color: #FFF !important;
+  background: #43AA88 !important;
+  border: solid 1px  #43AA88;
+  margin-bottom: 10px;
+  
+}
+
+.linkRedes{
+  padding: 0 !important;
+}
+
+.linkRedes:hover{
+  padding: 0 !important;
 }
 
 
