@@ -95,6 +95,12 @@ private postsUrl = "http://michoacantrespuntocero.com/cultura30/wp-json/wp/v2/";
         .map((res: Response) => res.json());
   }
 
+   GetCategoryCountTradiciones(): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'categories/56')
+        .map((res: Response) => res.json());
+  }
+
 
    GetCategoryCountArtesanoias(): Observable<Post[]> {
       return this.http
@@ -220,6 +226,20 @@ private postsUrl = "http://michoacantrespuntocero.com/cultura30/wp-json/wp/v2/";
   getPosts_radio_podcast_home(): Observable<Post[]> {
       return this.http
         .get(this.postsUrl + 'posts?categories=23&per_page=6&order=desc')
+        .map((res: Response) => res.json());
+  }
+
+
+   // POST TRADICIONES
+   getPosts_tradiciones(): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'posts?categories=56&per_page=12&order=desc')
+        .map((res: Response) => res.json());
+  }
+
+  getPosts_tradiciones_home(): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'posts?categories=56&per_page=6&order=desc')
         .map((res: Response) => res.json());
   }
 

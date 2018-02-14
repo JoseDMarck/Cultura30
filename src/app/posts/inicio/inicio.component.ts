@@ -44,6 +44,7 @@ export class InicioComponent implements OnInit {
   posts_opinion: Post[];
   posts_teatro: Post[];
   posts_fotografia: Post[];
+  posts_tradiciones: Post[];
 
   exist_posts_musica: boolean;
   exist_posts_cine: boolean;
@@ -59,6 +60,7 @@ export class InicioComponent implements OnInit {
   exist_posts_opinion: boolean;
   exist_posts_teatro: boolean;
   exist_posts_fotografia: boolean;
+  exist_posts_tradiciones: boolean;
 
 
 
@@ -251,6 +253,18 @@ export class InicioComponent implements OnInit {
   }
 
 
+    getPosts_Tradiciones(){
+    this.postsService
+      .getPosts_tradiciones_home()
+      .subscribe(res => {
+        this.posts_tradiciones = res;
+
+        if (this.posts_tradiciones.length > 0){  this.exist_posts_tradiciones = true; }
+        else { this.exist_posts_tradiciones  = false }
+      });
+  }
+
+
 
     //ANIMACION TOGGLE
     get stateName() {
@@ -294,6 +308,7 @@ export class InicioComponent implements OnInit {
     this.getPosts_Opinion();
     this.getPosts_teatro();
     this.getPosts_Fotografia();
+    this.getPosts_Tradiciones();
   }
 
 

@@ -18,6 +18,8 @@ import { InicioComponent } from './posts/inicio/inicio.component';
 import { OpinionComponent } from './posts/opinion/opinion.component';
 import { TeatroComponent } from './posts/teatro/teatro.component';
 import { FotografiaComponent } from './posts/fotografia/fotografia.component';
+import { TradicionesComponent } from './posts/tradiciones/tradiciones.component';
+
 import { MetaGuard } from '@ngx-meta/core';
 
 
@@ -124,9 +126,15 @@ const routes: Routes = [
   },
 
 
-   {
+  {
     path: 'publicaciones-fotografia',
     component: FotografiaComponent,
+    pathMatch: 'full'
+  },
+
+  {
+    path: 'publicaciones-tradiciones',
+    component: TradicionesComponent,
     pathMatch: 'full'
   },
 
