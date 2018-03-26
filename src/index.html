@@ -16,12 +16,16 @@
 </script>
 
 
+<?php 
+$urlImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); 
+$extracto = (get_post_meta($post->ID, 'id_post_extracto', true));
+?>
 
-<meta property="og:url"                content="http://michoacantrespuntocero.com/cultura30/" />
+<meta property="og:url"                content="<?php the_permalink(); ?>" />
 <meta property="og:type"               content="article" />
-<meta property="og:title"              content="Cultura 3.0" />
-<meta property="og:description"        content="Un suplemento digital de Revolución 3.0" />
-<meta property="og:image"              content="http://culturatrespuntocero.com/images/generales/logo.png" />
+<meta property="og:title"              content="<?php echo the_title(); ?>" />
+<meta property="og:description"        content="<?php echo $extracto; ?>" />
+<meta property="og:image"              content="<?php echo $urlImage;  ?>" />
 
   
   <!-- http://michoacantrespuntocero.com/cultura30/ -->

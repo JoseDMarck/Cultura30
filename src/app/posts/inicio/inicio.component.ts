@@ -45,6 +45,7 @@ export class InicioComponent implements OnInit {
   posts_teatro: Post[];
   posts_fotografia: Post[];
   posts_tradiciones: Post[];
+  posts_ferias: Post[];
 
   exist_posts_musica: boolean;
   exist_posts_cine: boolean;
@@ -61,6 +62,8 @@ export class InicioComponent implements OnInit {
   exist_posts_teatro: boolean;
   exist_posts_fotografia: boolean;
   exist_posts_tradiciones: boolean;
+  exist_posts_ferias: boolean;
+  
 
 
 
@@ -266,6 +269,18 @@ export class InicioComponent implements OnInit {
 
 
 
+  getPosts_Ferias(){
+    this.postsService
+      .getPosts_ferias_home()
+      .subscribe(res => {
+        this.posts_ferias = res;
+        if (this.posts_ferias.length > 0){  this.exist_posts_ferias = true; }
+        else { this.exist_posts_ferias  = false }
+      });
+  }
+
+
+
     //ANIMACION TOGGLE
     get stateName() {
         return this.show ? 'show' : 'hide'
@@ -309,6 +324,7 @@ export class InicioComponent implements OnInit {
     this.getPosts_teatro();
     this.getPosts_Fotografia();
     this.getPosts_Tradiciones();
+    this.getPosts_Ferias();
   }
 
 

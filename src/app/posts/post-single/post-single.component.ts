@@ -21,7 +21,7 @@ export class PostSingleComponent implements OnInit {
  TweetTitulo: any;
  repoUrl:any;
  repoUrlWA: any;
-
+ reloadState: any;
  
  constructor(private postsService: PostsService, private route: ActivatedRoute, private sanitizer: DomSanitizer, elm: ElementRef) { 
       
@@ -39,10 +39,8 @@ export class PostSingleComponent implements OnInit {
         console.log("Post", this.post)
         console.log("SlugArray", this.slugArray )
         console.log("TweetTitulo", this.TweetTitulo )
-        this.repoUrl = 'http://michoacantrespuntocero.com/cultura30/posts-redes/'+this.slugArray;
+        this.repoUrl = 'http://michoacantrespuntocero.com/cultura30/'+this.slugArray;
         this.repoUrlWA = 'whatsapp://send?text='+this.repoUrl;
-
-   
       });
   }
 

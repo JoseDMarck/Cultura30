@@ -27,6 +27,8 @@ import { OpinionComponent } from './posts/opinion/opinion.component';
 import { TeatroComponent } from './posts/teatro/teatro.component';
 import { FotografiaComponent } from './posts/fotografia/fotografia.component';
 import { TradicionesComponent } from './posts/tradiciones/tradiciones.component';
+import { FeriasComponent } from './posts/ferias/ferias.component';
+
 
 
 import {ShareModule} from 'ng2share/share.module'
@@ -68,6 +70,7 @@ import { MetaModule } from '@ngx-meta/core';
     TeatroComponent,
     FotografiaComponent,
     TradicionesComponent,
+    FeriasComponent,
     CeiboShare,
     PostListEspaciosComponent
   ],

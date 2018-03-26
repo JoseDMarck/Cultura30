@@ -20,7 +20,7 @@
 
      <div class="nombreSeccion" style="display: block !important; cursor: pointer;" (click)="SelecccionMenu('musica');">
        Música 
-      <div class="colorSeccion color-azul" style="width: 120px;"></div>
+      <div class="colorSeccion color-azul" style="width: 105px;"></div>
     </div> 
     
     <!-- Seccion para el menu -->
@@ -878,6 +878,58 @@
 
 
  
+
+
+    <!-- Ferias  ============================ -->
+    <div class="" *ngIf="exist_posts_ferias">
+        
+             <div class="nombreSeccion" style="display: block !important; cursor: pointer;" (click)="SelecccionMenu('ferias');">
+               Ferias
+              <div class="colorSeccion color-azul" style="width: 120px;"></div>
+            </div> 
+            
+            <!-- Seccion para el menu -->
+            <div *ngFor="let post of posts_ferias; let i = index;" (click)="selectPost(post.slug)" class="BloqueOX  BloqueOut-{{i+1}}" >
+        
+              <div class="Mestitulo" style="display: none;">
+                     {{ post.mensualidad }}
+              </div>
+              
+              <div class="bloqueX2 color-azul {{post.imagen_sin_post}}">
+             
+        
+                 <div class="cuadrito color-azul"></div>
+        
+                   <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>      
+        
+                 <div class="CuadroInformacion">    
+        
+                    <div class="dia" *ngIf="post.Mes !== ''"> {{ post.Dia }} </div>
+                    <div class="mes">{{ post.Mes }}</div>
+        
+                    <div class="CuadroEventos">
+                        <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                        <div class="lugar" *ngIf="post.Mes === ''">{{ post.post_fecha}}</div>
+                        <div class="lugar" *ngIf="post.Mes === ''">{{post.post_author}}</div>
+                        <div class="lugar" *ngIf="post.Mes !== ''">{{ post.Lugar }}</div>
+                        <div class="hora"  *ngIf="post.Mes !== ''">{{ post.Hora }}</div>
+        
+                        <div [innerHTML]="post.excerpt.rendered" class="extracto"></div>
+        
+                    </div><!-- CuadroEventos -->
+        
+                 </div><!-- Cuadro informacion -->
+        
+            
+              </div>
+        
+            </div><!-- col -->
+        
+                <div style="clear: both; width: 100%; height:10px;"></div>
+          
+        
+        
+          </div>
 
 
 

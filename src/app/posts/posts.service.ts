@@ -161,6 +161,14 @@ private postsUrl = "http://michoacantrespuntocero.com/cultura30/wp-json/wp/v2/";
 
 
 
+  GetCategoryCountFerias(): Observable<Post[]> {
+    return this.http
+      .get(this.postsUrl + 'categories/57')
+      .map((res: Response) => res.json());
+}
+
+
+
 
 
     // POST PARA CINE
@@ -338,14 +346,15 @@ private postsUrl = "http://michoacantrespuntocero.com/cultura30/wp-json/wp/v2/";
         .map((res: Response) => res.json());
   }
 
-
-
   // POST PARA TEATRO
    getPosts_teatro_home(): Observable<Post[]> {
       return this.http
         .get(this.postsUrl + 'posts?categories=54&per_page=6&order=desc')
         .map((res: Response) => res.json());
   }
+
+
+  
 
 
 
@@ -398,6 +407,21 @@ private postsUrl = "http://michoacantrespuntocero.com/cultura30/wp-json/wp/v2/";
         .map((res: Response) => res.json());
   }
 
+
+
+  // POST PARA FERIAS
+     getPosts_ferias(): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'posts?categories=57&per_page=12&order=desc')
+        .map((res: Response) => res.json());
+  }
+
+  // POST PARA TEATRO
+  getPosts_ferias_home(): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'posts?categories=57&per_page=6&order=desc')
+        .map((res: Response) => res.json());
+  }
 
 
 // PARA LOS MESES DE LA CARTELERA =====================================

@@ -19,6 +19,7 @@ import { OpinionComponent } from './posts/opinion/opinion.component';
 import { TeatroComponent } from './posts/teatro/teatro.component';
 import { FotografiaComponent } from './posts/fotografia/fotografia.component';
 import { TradicionesComponent } from './posts/tradiciones/tradiciones.component';
+import { FeriasComponent } from './posts/ferias/ferias.component';
 
 import { MetaGuard } from '@ngx-meta/core';
 
@@ -135,6 +136,12 @@ const routes: Routes = [
   {
     path: 'publicaciones-tradiciones',
     component: TradicionesComponent,
+    pathMatch: 'full'
+  },
+
+  {
+    path: 'publicaciones-ferias',
+    component: FeriasComponent,
     pathMatch: 'full'
   },
 
