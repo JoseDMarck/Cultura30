@@ -2,3 +2,9 @@ node_modules/
 compilacion-code/
 e2e/
 .DS_Store
+angular-cli.json
+karma.conf.js
+package-lock.json
+package.json
+protractor.conf.js
+tslint.json
