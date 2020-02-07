@@ -6,7 +6,7 @@ import { Post } from './post';
 
 @Injectable()
 export class PostsService {
-private postsUrl = "http://michoacantrespuntocero.com/cultura30/wp-json/wp/v2/";
+private postsUrl = "https://revolucion.news/cultura30/wp-json/wp/v2/";
 
   constructor(private http: Http) { }
 
