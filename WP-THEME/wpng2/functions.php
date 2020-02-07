@@ -135,7 +135,7 @@ function custom_wp_menu() {
 
 // create new endpoint route
 add_action( 'rest_api_init', function () {
-    register_rest_route( 'wp/v2', 'menu', array(
+    register_rest_route( 'wp/v2', 'menus/principal', array(
         'methods' => 'GET',
         'callback' => 'custom_wp_menu',
     ) );
