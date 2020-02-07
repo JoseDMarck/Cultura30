@@ -20,6 +20,11 @@ import { TeatroComponent } from './posts/teatro/teatro.component';
 import { FotografiaComponent } from './posts/fotografia/fotografia.component';
 import { TradicionesComponent } from './posts/tradiciones/tradiciones.component';
 import { FeriasComponent } from './posts/ferias/ferias.component';
+import { ArtesComponent } from './posts/artes/artes.component';
+import { VideosComponent } from './posts/videos/videos.component';
+import { VinosComponent } from './posts/vinos/vinos.component';
+import { CulturaComponent } from './posts/cultura/cultura.component';
+
 
 import { MetaGuard } from '@ngx-meta/core';
 
@@ -145,8 +150,39 @@ const routes: Routes = [
     pathMatch: 'full'
   },
 
-  
+  {
+    path: 'publicaciones-artes',
+    component: ArtesComponent,
+    pathMatch: 'full'
+  },
 
+  {
+    path: 'publicaciones-video',
+    component: VideosComponent,
+    pathMatch: 'full'
+  },
+
+  {
+    path: 'publicaciones-vinos',
+    component: VinosComponent,
+    pathMatch: 'full'
+  },
+
+  {
+    path: 'publicaciones-gastronomia',
+    component: PostListGastronomiaComponent,
+    pathMatch: 'full'
+  },
+
+  {
+    path: 'publicaciones-cultura',
+    component: CulturaComponent,
+    pathMatch: 'full'
+  },
+
+  
+  
+  
 
   {
     path: ':slug',

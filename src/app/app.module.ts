@@ -28,6 +28,12 @@ import { TeatroComponent } from './posts/teatro/teatro.component';
 import { FotografiaComponent } from './posts/fotografia/fotografia.component';
 import { TradicionesComponent } from './posts/tradiciones/tradiciones.component';
 import { FeriasComponent } from './posts/ferias/ferias.component';
+import { ArtesComponent } from './posts/artes/artes.component';
+import { VideosComponent } from './posts/videos/videos.component';
+import { VinosComponent } from './posts/vinos/vinos.component';
+import { CulturaComponent } from './posts/cultura/cultura.component';
+
+//news
 
 
 
@@ -72,7 +78,11 @@ import { MetaModule } from '@ngx-meta/core';
     TradicionesComponent,
     FeriasComponent,
     CeiboShare,
-    PostListEspaciosComponent
+    PostListEspaciosComponent,
+    ArtesComponent,
+    VideosComponent,
+    VinosComponent,
+    CulturaComponent
   ],
   imports: [
     BrowserModule,
