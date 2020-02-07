@@ -135,7 +135,7 @@ export class PostListMusicaComponent implements OnInit {
     this.getCategoryCountMusica();
 
     /*this.meta.setTitle('Musica 3.0');
-    this.meta.setTag('og:url', 'http://michoacantrespuntocero.com/cultura30/publicaciones-musica');
+    this.meta.setTag('og:url', 'https://revolucion.news/cultura30/publicaciones-musica');
     this.meta.setTag('og:type', 'article');
     this.meta.setTag('og:title', 'Articulos de Música 3.0');
     this.meta.setTag('og:description', 'Cultura 3.0 es un suplemento digital de Revolción 3.0');

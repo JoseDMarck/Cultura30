@@ -39,7 +39,7 @@ export class PostSingleComponent implements OnInit {
         console.log("Post", this.post)
         console.log("SlugArray", this.slugArray )
         console.log("TweetTitulo", this.TweetTitulo )
-        this.repoUrl = 'http://michoacantrespuntocero.com/cultura30/'+this.slugArray;
+        this.repoUrl = 'https://revolucion.news/cultura30/'+this.slugArray;
         this.repoUrlWA = 'whatsapp://send?text='+this.repoUrl;
       });
   }

@@ -16,7 +16,7 @@
  <div class="Loading">
  
  <?php
- //http://michoacantrespuntocero.com/cultura30/posts-redes/2a-exposicion-de-altares-de-michoacanos-ilustres/ 
+ //https://revolucion.news/cultura30/posts-redes/2a-exposicion-de-altares-de-michoacanos-ilustres/ 
 $valor_url_post = get_permalink();
 $quitar = array("posts-redes/");
 $url_final = str_replace($quitar, "", $valor_url_post);

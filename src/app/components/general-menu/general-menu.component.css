@@ -1,0 +1,13 @@
+
+
+
+.menuContainer{
+    width:  100%;
+    height: 500px;
+    background: #bc4b4b;
+}
+
+p{
+    color: #bc4b4b;
+    font-family: "Roboto-Black";
+}

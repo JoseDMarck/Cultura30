@@ -47,7 +47,7 @@ console.log("Slug XXXX", slug)
         console.log("Post", this.post)
         console.log("SlugArray", this.slugArray )
         console.log("TweetTitulo", this.TweetTitulo )
-        this.repoUrl = 'http://michoacantrespuntocero.com/cultura30/posts-redes/'+this.slugArray;
+        this.repoUrl = 'https://revolucion.news/cultura30/posts-redes/'+this.slugArray;
 
 
       });
