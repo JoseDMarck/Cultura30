@@ -19,5 +19,15 @@ export class RutesService {
   }
 
 
+  // Regresa un listado de posts por categoria (ID)
+  getPostsbyCategoryID(categoryID): Observable<any> {
+    console.log("categoryID: ", categoryID)
+    return this.http
+      .get(this.postsUrl + '/posts?categories='+categoryID+'&per_page=12&order=asc')
+      .map((res: Response) => res.json());
+  }
+
+
+
 
 }

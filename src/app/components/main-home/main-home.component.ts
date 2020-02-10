@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PostsCategoryListsComponent } from '../../pages/posts-category-lists/posts-category-lists.component';
 
 
 @Component({

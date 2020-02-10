@@ -1,25 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MainHomeComponent } from './components/main-home/main-home.component';
-
-import { MetaGuard } from '@ngx-meta/core';
-
+import {PostsCategoryListsComponent } from './pages/posts-category-lists/posts-category-lists.component';
+import {PostsCategoryLists2Component } from './pages/posts-category-lists-2/posts-category-lists-2.component';
 
 
-
+ 
 const routes: Routes = [
-  
-
   {
-    path: '',
-    component: MainHomeComponent
+    path: 'secciones/:slug',
+    component: PostsCategoryListsComponent
   },
-  
+
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-  providers: []
+  exports: [RouterModule]
 })
+
 export class Wpng2RoutingModule { }

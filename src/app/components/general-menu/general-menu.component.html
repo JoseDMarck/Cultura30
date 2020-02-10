@@ -1,1 +1,9 @@
-menu General
+<p (click)="inicio()">
+    inicio
+</p>
+
+<p *ngFor="let menu of menus" (click)="goToPost(menu.slug, menu.categoryID)">
+    {{ menu.name }}
+</p>
+
+

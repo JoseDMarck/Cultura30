@@ -21,8 +21,6 @@ menu_current:any;
 selectedClass: number;
   constructor(private router: Router) { 
     this.selectedClass = 0;
-   
-
   }
 
 

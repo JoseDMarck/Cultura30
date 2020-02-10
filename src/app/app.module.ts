@@ -18,14 +18,21 @@ import { RutesService } from './services/rutes.service';
 import { GeneralMenuComponent } from './components/general-menu/general-menu.component';
 import { MainHomeComponent } from './components/main-home/main-home.component';
 
-
+//PAGES
+import {PostsCategoryListsComponent } from './pages/posts-category-lists/posts-category-lists.component';
+import {PostsCategoryLists2Component } from './pages/posts-category-lists-2/posts-category-lists-2.component';
+import {PostListCineComponent } from './posts/post-list-cine/post-list-cine.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     GeneralMenuComponent,
-    MainHomeComponent
+    MainHomeComponent,
+    //PAGES:
+    PostsCategoryListsComponent,
+    PostsCategoryLists2Component
+    
 
 
   ],
@@ -37,7 +44,6 @@ import { MainHomeComponent } from './components/main-home/main-home.component';
     ShareModule,
     MetaModule.forRoot(),
     BrowserAnimationsModule,
-    
   ],
   providers: [RutesService],
   bootstrap: [AppComponent]
