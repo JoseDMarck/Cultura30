@@ -1,9 +1,16 @@
-<p (click)="inicio()">
-    inicio
-</p>
+<div class="menuContainer">
+    <div class="logo">
+        <img alt="Cultura-3.0-Logo" src="../../../assets/images/home/Cultura-3.0-Logo.png">
+    </div>
 
-<p *ngFor="let menu of menus" (click)="goToPost(menu.slug, menu.categoryID)">
-    {{ menu.name }}
-</p>
+    <ul>
+        <li (click)="inicio()">
+            <span class="color_pink">*</span> Inicio
+        </li>
+        <li *ngFor="let menu of menus" (click)="goToPost(menu.slug, menu.categoryID)">
+            <span class="{{menu.color}}">*</span> {{ menu.name }}
+        </li>
 
+    </ul>
 
+</div>

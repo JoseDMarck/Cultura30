@@ -30,10 +30,23 @@ export class GeneralMenuComponent implements OnInit {
           "name": res[i].title,
           "url": res[i].url,
           "categoryID": res[i].object_id,
-          "slug": this.getCleanedString(res[i].title)
+          "slug": this.getCleanedString(res[i].title),
+          "color": ""
         })
+
+
+        switch (i % 4) {
+          case 0: this.menus[i].color = "color_yellow" ; break;
+          case 1: this.menus[i].color = "color_blue"; break;
+          case 2: this.menus[i].color = "color_green";  break;
+          case 3: this.menus[i].color = "color_pink"; break;
+       }   
+        
+         
       }
     });
+
+    console.log("menus -->", this.menus);
 
   }
 
