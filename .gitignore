@@ -8,3 +8,9 @@ package-lock.json
 package.json
 protractor.conf.js
 tslint.json
+.editorconfig
+angular.json
+browserslist
+tsconfig.app.json
+tsconfig.json
+tsconfig.spec.json

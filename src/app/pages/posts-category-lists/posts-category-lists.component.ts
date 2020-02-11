@@ -24,14 +24,14 @@ export class PostsCategoryListsComponent implements OnInit {
       console.log("slug--> ", slug);
       console.log("categoryID--> ", categoryID);
 
-      this.routesService.getPostsbyCategoryID(categoryID).subscribe(res => {
+      /*this.routesService.getPostsbyCategoryID(categoryID).subscribe(res => {
         console.log("res -->", res);
         for (var i = 0; i < res.length; i++) {
           this.post.push({
              
           })
         }
-      });
+      });*/
 
    });
   

@@ -3,4 +3,25 @@
  
 <p>
   <router-outlet></router-outlet>
+
+ 
 </p>
+
+ 
+
+<div class="masonry-demo">
+
+
+  <ngx-masonry [options]="masonryOptions" [useImagesLoaded]="true">
+    <div ngxMasonryItem class="masonry-item" *ngFor="let picture of dummyPictures" class="masonry-item">
+      <img src="{{picture.picture}}">
+      
+    </div>
+  </ngx-masonry>
+
+  <button *ngIf="limit < 100" (click)="showMoreImages()">Show More Images</button>
+  <h2 *ngIf="limit >= 100">No More Images</h2>
+</div>
+
+
+
